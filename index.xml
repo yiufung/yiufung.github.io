@@ -6,9 +6,29 @@
     <description>Recent content on Yiufung&#39;s Nest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 27 Sep 2018 23:46:08 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>http://yiufung.github.io/about/</link>
+      <pubDate>Thu, 27 Sep 2018 23:46:08 +0800</pubDate>
+      
+      <guid>http://yiufung.github.io/about/</guid>
+      <description>Something true.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>http://yiufung.github.io/posts/first-post/</link>
+      <pubDate>Wed, 08 Aug 2018 13:40:25 +0800</pubDate>
+      
+      <guid>http://yiufung.github.io/posts/first-post/</guid>
+      <description>Something like this should never happened.
+Or maybe</description>
+    </item>
     
   </channel>
 </rss>
