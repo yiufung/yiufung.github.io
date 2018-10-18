@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Thu, 27 Sep 2018 23:46:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Oct 2018 00:14:37 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,22 @@
     <item>
       <title>About</title>
       <link>http://yiufung.github.io/about/</link>
-      <pubDate>Thu, 27 Sep 2018 23:46:08 +0800</pubDate>
+      <pubDate>Fri, 19 Oct 2018 00:14:37 +0800</pubDate>
       
       <guid>http://yiufung.github.io/about/</guid>
-      <description>Programmer, data scientist, and conservative Christian. Nice to meet you.</description>
+      <description>Programmer, data plumber, and conservative Christian. Nice to meet you.
+This site is under construction. Meanwhile, you may reach me via email.</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>http://yiufung.github.io/posts/prep/</link>
+      <pubDate>Thu, 18 Oct 2018 23:34:34 +0800</pubDate>
+      
+      <guid>http://yiufung.github.io/posts/prep/</guid>
+      <description> Be the root directory for this Hugo site (the directory containing config.toml). Run
+hugo server --port 1111  See the site served on &amp;ldquo;http://localhost:1111/&amp;rdquo;.
+  </description>
     </item>
     
   </channel>

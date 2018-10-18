@@ -4,11 +4,22 @@
   
   <url>
     <loc>http://yiufung.github.io/about/</loc>
-    <lastmod>2018-09-27T23:46:08+08:00</lastmod>
+    <lastmod>2018-10-19T00:14:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yiufung.github.io/posts/prep/</loc>
+    <lastmod>2018-10-18T23:34:34+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://yiufung.github.io/posts/</loc>
+    <lastmod>2018-10-18T23:34:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -19,7 +30,7 @@
   
   <url>
     <loc>http://yiufung.github.io/</loc>
-    <lastmod>2018-09-27T23:46:08+08:00</lastmod>
+    <lastmod>2018-10-19T00:14:37+08:00</lastmod>
     <priority>0</priority>
   </url>
   
