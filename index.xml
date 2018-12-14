@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Fri, 19 Oct 2018 00:14:37 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Dec 2018 22:46:13 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,21 @@
     <item>
       <title>About</title>
       <link>http://yiufung.github.io/about/</link>
-      <pubDate>Fri, 19 Oct 2018 00:14:37 +0800</pubDate>
+      <pubDate>Fri, 14 Dec 2018 22:46:13 +0800</pubDate>
       
       <guid>http://yiufung.github.io/about/</guid>
       <description>Programmer, data plumber, and conservative Christian. Nice to meet you.
 This site is under construction. Meanwhile, you may reach me via email.</description>
+    </item>
+    
+    <item>
+      <title>Learning Emacs Key Bindings</title>
+      <link>http://yiufung.github.io/posts/emacs-key-binding-conventions-and-why-you-should-try-it/</link>
+      <pubDate>Fri, 14 Dec 2018 22:08:00 +0800</pubDate>
+      
+      <guid>http://yiufung.github.io/posts/emacs-key-binding-conventions-and-why-you-should-try-it/</guid>
+      <description>This post describes my method to learn Emacs native keybindings from an ex-Vimmer&amp;rsquo;s perspective. It&amp;rsquo;s an extension from my Reddit post.
+Evil-mode journey My Emacs journey started with Spacemacs. At that time, I had the misconception that Emacs has lengthy and incomprehensible keybindings, so without a second thought, I chose to go with Vim-bindings, which I used for 6 years and even read a book about. Spacemacs is surely a great project, opening up all the goodies of Emacs to a Vimmer.</description>
     </item>
     
   </channel>
