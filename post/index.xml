@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 彷彿若有光</title>
-    <link>http://yiufung.github.io/post/</link>
+    <link>http://yiufung.net/post/</link>
     <description>Recent content in Posts on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
     <lastBuildDate>Fri, 14 Dec 2018 22:08:00 +0800</lastBuildDate>
     
-	<atom:link href="http://yiufung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Emacs Key Bindings</title>
-      <link>http://yiufung.github.io/post/emacs-key-binding-conventions-and-why-you-should-try-it/</link>
+      <link>http://yiufung.net/post/emacs-key-binding-conventions-and-why-you-should-try-it/</link>
       <pubDate>Fri, 14 Dec 2018 22:08:00 +0800</pubDate>
       
-      <guid>http://yiufung.github.io/post/emacs-key-binding-conventions-and-why-you-should-try-it/</guid>
+      <guid>http://yiufung.net/post/emacs-key-binding-conventions-and-why-you-should-try-it/</guid>
       <description>This post describes my method to learn Emacs native keybindings from an ex-Vimmer&amp;rsquo;s perspective. It&amp;rsquo;s an extension from a Reddit post.
 Evil-mode journey My Emacs journey started with Spacemacs. At that time, I had the misconception that Emacs has lengthy and incomprehensible keybindings, so without a second thought, I chose to go with Vim-bindings, which I used for 6 years and even read a book about. Spacemacs is surely a great project, opening up all the goodies of Emacs to a Vimmer.</description>
     </item>
