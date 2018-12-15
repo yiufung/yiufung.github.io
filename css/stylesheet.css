@@ -88,6 +88,8 @@ pre {
     background-color: #efefef
 }
 
-footer  {
+.word {
     text-align: right;
+    color: black;
+    font-style: italic;
 }
