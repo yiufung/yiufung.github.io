@@ -1,7 +1,13 @@
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lora', sans-serif;
     margin: auto;
-    max-width: 50em;
+    max-width: 55em;
+    background-color: floralwhite;
+}
+
+
+.navbar-nav {
+    font-size: 1rem;
 }
 
 #page-title {
@@ -28,7 +34,7 @@ body {
 }
 
 .date-time-title {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Inconsolata', monospace;
 }
 
 .blog-post-content {
@@ -41,7 +47,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 h2 {
@@ -65,9 +71,13 @@ h6  {
 }
 
 code {
-  font-family: 'Ubuntu Mono', monospace;
-  white-space: pre;
-  overflow-x: auto;
+    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    background-color: white;
+    font-size: 1rem;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 pre {
@@ -79,5 +89,5 @@ pre {
 }
 
 footer  {
-  text-align: center;
+    text-align: right;
 }
