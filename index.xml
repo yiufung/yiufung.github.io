@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Fri, 19 Apr 2019 22:31:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 23:04:57 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Fri, 19 Apr 2019 22:31:55 +0800</pubDate>
+      <pubDate>Fri, 19 Apr 2019 23:04:57 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
@@ -28,7 +28,7 @@ You may reach me via email.</description>
       
       <guid>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</guid>
       <description>Last year I rewrote my configuration from scratch as I migrated from Spacemacs to vanilla Emacs. At first I chose to use Org Babel, the literate programming style. After a while, however, I find it not as handy as expected:
- At least 2 files are to be maintained (init.el &amp;amp; config.org), which adds unnecessary complexity init.el needs to re-tangle the whole Org file for every single change, which gets slow as code blocks accumulated, and gets annoying when experimenting with new package Debugging is not straightforward.</description>
+ At least 2 files are to be maintained (init.el &amp;amp; config.org), which adds unnecessary complexity init.el needs to re-tangle the whole Org file for every single change, which gets slow as code blocks accumulated, and gets annoying with frequent restarts when I tried out new packages Debugging is not straightforward.</description>
     </item>
     
     <item>
