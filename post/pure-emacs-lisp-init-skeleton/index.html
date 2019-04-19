@@ -119,6 +119,8 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 (<span style="color:#658b00">eval-when-compile</span>
   (<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;use-package</span>))
 
+<span style="color:#228b22">;; Add all use-package definitions from here</span>
+
 (<span style="color:#658b00">use-package</span> <span style="color:#00688b">outshine</span>
   <span style="color:#228b22">;; Easier navigation for source files, especially this one.</span>
   <span style="color:#658b00">:bind</span> (<span style="color:#658b00">:map</span> <span style="color:#00688b">outshine-mode-map</span>
@@ -126,8 +128,6 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
               (<span style="color:#cd5555">&#34;&lt;backtab&gt;&#34;</span>       . <span style="color:#00688b">outshine-cycle-buffer</span>)) <span style="color:#228b22">;; For Windows</span>
   <span style="color:#658b00">:hook</span> (<span style="color:#00688b">emacs-lisp-mode</span> . <span style="color:#00688b">outshine-mode</span>)
   )
-
-<span style="color:#228b22">;; Add all use-package definitions here</span>
 
 <span style="color:#228b22">;; When config gets stable, using emacs server may be more convenient</span>
 <span style="color:#228b22">;; (require &#39;server)</span>
