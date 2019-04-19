@@ -67,9 +67,9 @@ unnecessary complexity</li>
 <li><code>init.el</code> needs to re-tangle the whole Org file for every single change, which
 gets slow as code blocks accumulated, and gets annoying when experimenting
 with new package</li>
-<li>Debugging is not intuitive. If I made any mistake (miss a parenthesis, typo),
-error prompts will refer to locations in the tangled Lisp file instead of
-original Org file</li>
+<li>Debugging is not straightforward. If I made any mistake (miss a parenthesis,
+typo), error prompts will refer to locations in the tangled Lisp file instead
+of original Org file</li>
 </ol>
 
 <p>I figured I don&rsquo;t really need full-featured Org-mode (scheduling, deadlines,
@@ -119,8 +119,7 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
   (<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;use-package</span>))
 
 (<span style="color:#658b00">use-package</span> <span style="color:#00688b">outshine</span>
-  <span style="color:#228b22">;; Easier navigation for source code file, especially this one.</span>
-  <span style="color:#658b00">:demand</span> <span style="color:#00688b">t</span>
+  <span style="color:#228b22">;; Easier navigation for source files, especially this one.</span>
   <span style="color:#658b00">:bind</span> (<span style="color:#658b00">:map</span> <span style="color:#00688b">outshine-mode-map</span>
               (<span style="color:#cd5555">&#34;&lt;S-iso-lefttab&gt;&#34;</span> . <span style="color:#00688b">outshine-cycle-buffer</span>)
               (<span style="color:#cd5555">&#34;&lt;backtab&gt;&#34;</span>       . <span style="color:#00688b">outshine-cycle-buffer</span>)) <span style="color:#228b22">;; For Windows</span>
