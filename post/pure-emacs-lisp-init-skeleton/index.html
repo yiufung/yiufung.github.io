@@ -58,15 +58,16 @@ if (!doNotTrack) {
   </div>
   <div class="blog-post-content">
     <p>Last year I rewrote my configuration from scratch as I migrated from Spacemacs
-to vanilla Emacs. At first I chose to use Org Babel, the literate programming
-style. After a while, however, I find it not as handy as expected:</p>
+to vanilla Emacs. For config style, I chose to use Org Babel - which normally
+involves using a short Lisp file (<code>init.el</code>) to tangle and load actual config
+written in Org mode (<code>config.org</code>) - for its readability and easy
+navigation. After a while, however, I find it not as handy as expected:</p>
 
 <ol>
-<li>At least 2 files are to be maintained (<code>init.el</code> &amp; <code>config.org</code>), which adds
-unnecessary complexity</li>
-<li><code>init.el</code> needs to re-tangle the whole Org file for every single change, which
-gets slow as code blocks accumulated, and gets annoying with frequent
-restarts when I tried out new packages</li>
+<li>At least 2 files are to be maintained, which adds unnecessary complexity</li>
+<li><code>config.org</code> needs to be re-tangled for every single change, which gets slow as
+code blocks accumulated, and gets annoying with frequent restarts when I
+tried out new packages</li>
 <li>Debugging is not straightforward. If I made any mistake (miss a parenthesis,
 typo), error prompts will refer to locations in the tangled Lisp file instead
 of original Org file</li>
