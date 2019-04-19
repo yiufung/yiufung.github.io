@@ -57,9 +57,9 @@ if (!doNotTrack) {
     <time>19 Apr 2019</time>
   </div>
   <div class="blog-post-content">
-    <p>Last year I rewrote my configuration from scratch using as I migrated from
-Spacemacs to vanilla Emacs. At first I chose to use Org babel, the literate
-programming style. After a while, however, I find it not as handy as expected:</p>
+    <p>Last year I rewrote my configuration from scratch as I migrated from Spacemacs
+to vanilla Emacs. At first I chose to use Org babel, the literate programming
+style. After a while, however, I find it not as handy as expected:</p>
 
 <ol>
 <li>At least 2 files are to be maintained (<code>init.el</code> &amp; <code>config.org</code>), which is
@@ -72,13 +72,14 @@ error prompts will refer to locations in the tangled lisp file instead of
 original Org file</li>
 </ol>
 
-<p>I figured I don&rsquo;t really need full-feature Org-mode for a simple init file. What
-I really need is easy cycling navigation through the file, and the ability to
-jump to a <code>use-package</code> definition by name directly. After a little research, it
-seems for the former <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a> comes to rescue, and for the latter, <code>use-package</code>
-provides a useful option <code>use-package-enable-imenu-support</code>.</p>
+<p>I figured I don&rsquo;t really need full-featured Org-mode for a simple init
+file. What I really need is easy cycling navigation through the file, and, as I
+mainly use <code>use-package</code>, the ability to jump to a <code>use-package</code> definition by name
+directly. After a little research, I found that for the former <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a> comes
+to rescue, and for the latter, <code>use-package</code> provides a useful option
+<code>use-package-enable-imenu-support</code>.</p>
 
-<p>So after a little tweaking, here it is, a minimal skeleton for Emacs init.</p>
+<p>So here it is, a minimal skeleton for Emacs init.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;;; init.el --- skeleton config  -*- lexical-binding: t; coding:utf-8; fill-column: 119 -*-</span>
 
 <span style="color:#228b22">;;; Commentary:</span>
@@ -145,6 +146,16 @@ provides a useful option <code>use-package-enable-imenu-support</code>.</p>
 <p>From there I base all my configurations using <code>use-package</code>, and have a startup
 time of 0.9s with 100+ packages (Main trick: use <code>:defer [N]</code> to defer-load all
 non-necessary packages. The only must-haves for me are <code>counsel</code> and <code>org</code>).</p>
+
+<figure>
+    <img src="/ox-hugo/emacs-init-hierarchy.png"/> 
+</figure>
+
+
+<figure>
+    <img src="/ox-hugo/emacs-init-counsel-imenu.png"/> 
+</figure>
+
 
 <p>Hope that&rsquo;s useful for anyone thinking to rewrite their configs.</p>
 
