@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Fri, 19 Apr 2019 23:34:42 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 23:38:32 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Fri, 19 Apr 2019 23:34:42 +0800</pubDate>
+      <pubDate>Fri, 19 Apr 2019 23:38:32 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
@@ -27,7 +27,7 @@ You may reach me via email.</description>
       <pubDate>Fri, 19 Apr 2019 15:39:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</guid>
-      <description>Last year I rewrote my configuration from scratch as I migrated from Spacemacs to vanilla Emacs. For config style, I chose to use Org Babel - which normally involves using a short Lisp file (init.el) to tangle and load actual config written in Org mode (config.org) - for its readability and easy navigation. After a while, however, I find it not as handy as expected:
+      <description>Last year I rewrote my configuration from scratch as I migrated from Spacemacs to vanilla Emacs. For config style, I chose Org Babel - which normally involves using a short Lisp file (init.el) to tangle and load actual config written in Org mode (config.org) - for its readability and easy navigation. After a while, however, I find it not as handy as expected:
  At least 2 files are to be maintained, which adds unnecessary complexity config.</description>
     </item>
     
