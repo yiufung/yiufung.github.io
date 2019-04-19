@@ -82,12 +82,12 @@ directly. Fortunately, <code>use-package</code> provides a very useful option
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;;; init.el --- skeleton config  -*- lexical-binding: t; coding:utf-8; fill-column: 119 -*-</span>
 
 <span style="color:#228b22">;;; Commentary:</span>
-<span style="color:#228b22">;; A config template with minimal setups.  Use &#34;outshine-cycle-buffer&#34; (&lt;Tab&gt;</span>
-<span style="color:#228b22">;; and &lt;S-Tab&gt; in org style) to navigate through sections, and &#34;imenu&#34; to locate</span>
-<span style="color:#228b22">;; individual use-package definition.</span>
+<span style="color:#228b22">;; A bare-boned config template.  Use &#34;outshine-cycle-buffer&#34; (&lt;Tab&gt; and &lt;S-Tab&gt;</span>
+<span style="color:#228b22">;; in org style) to navigate through sections, and &#34;imenu&#34; to locate individual</span>
+<span style="color:#228b22">;; use-package definition.</span>
 
 <span style="color:#228b22">;;; Bootstrap</span>
-<span style="color:#228b22">;; Speed up startup time</span>
+<span style="color:#228b22">;; Speed up startup</span>
 (<span style="color:#658b00">setq</span> <span style="color:#00688b">package-enable-at-startup</span> <span style="color:#00688b">nil</span>
       <span style="color:#00688b">message-log-max</span> <span style="color:#b452cd">16384</span>
       <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">402653184</span>
@@ -126,7 +126,7 @@ directly. Fortunately, <code>use-package</code> provides a very useful option
   <span style="color:#658b00">:hook</span> (<span style="color:#00688b">emacs-lisp-mode</span> . <span style="color:#00688b">outshine-mode</span>)
   )
 
-<span style="color:#228b22">;; Add all your use-package definitions here</span>
+<span style="color:#228b22">;; Add all use-package definitions here</span>
 
 <span style="color:#228b22">;; When config gets stable, using emacs server may be more convenient</span>
 <span style="color:#228b22">;; (require &#39;server)</span>
@@ -142,7 +142,7 @@ directly. Fortunately, <code>use-package</code> provides a very useful option
 <li>Apply speed up techniques (taken from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley&rsquo;s config</a>)</li>
 </ol>
 
-<p>From there I base all my configuration using <code>use-package</code>, and have a startup
+<p>From there I base all my configurations using <code>use-package</code>, and have a startup
 time of 0.9s with 100+ packages (Main trick: use <code>:defer [N]</code> to defer-load all
 non-necessary packages. The only must-haves for me are <code>counsel</code> and <code>org</code>).</p>
 
