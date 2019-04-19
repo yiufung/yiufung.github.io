@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh_HK">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+
+    
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
+    
+
+    <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
+
+    <title>
+      
+      
+         Pure Emacs-Lisp Init Skeleton 
+      
+    </title>
+    <link rel="canonical" href="http://yiufung.net/post/pure-emacs-lisp-init-skeleton/">
+
+    <style>
+  * {
+    border:0;
+    font:inherit;
+    font-size:100%;
+    vertical-align:baseline;
+    margin:0;
+    padding:0;
+    color: black;
+    text-decoration-skip: ink;
+  }
+
+  body {
+    font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-size:17px;
+    line-height:160%;
+    color:#1d1313;
+    max-width:700px;
+    margin:auto;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  a img {
+    border:none;
+  }
+
+  img {
+    margin: 10px auto 10px auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .left-justify {
+    float: left;
+  }
+
+  .right-justify {
+    float:right;
+  }
+
+  pre, code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+  }
+
+  code {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    word-wrap: normal;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+  }
+
+  pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code::before,
+  pre code::after {
+    content: normal;
+  }
+
+  em,q,em,dfn {
+    font-style:italic;
+  }
+
+  .sans,html .gist .gist-file .gist-meta {
+    font-family:"Open Sans","Myriad Pro",Myriad,sans-serif;
+  }
+
+  .mono,pre,code,tt,p code,li code {
+    font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;
+  }
+
+  .heading,.serif,h1,h2,h3 {
+    font-family:"Old Standard TT",serif;
+  }
+
+  strong {
+    font-weight:600;
+  }
+
+  q:before {
+    content:"\201C";
+  }
+
+  q:after {
+    content:"\201D";
+  }
+
+  del,s {
+    text-decoration:line-through;
+  }
+
+  blockquote {
+    font-family:"Old Standard TT",serif;
+    text-align:center;
+    padding:50px;
+  }
+
+  blockquote p {
+    display:inline-block;
+    font-style:italic;
+  }
+
+  blockquote:before,blockquote:after {
+    font-family:"Old Standard TT",serif;
+    content:'\201C';
+    font-size:35px;
+    color:#403c3b;
+  }
+
+  blockquote:after {
+    content:'\201D';
+  }
+
+  hr {
+    width:40%;
+    height: 1px;
+    background:#403c3b;
+    margin: 25px auto;
+  }
+
+  h1 {
+    font-size:35px;
+  }
+
+  h2 {
+    font-size:28px;
+  }
+
+  h3 {
+    font-size:22px;
+    margin-top:18px;
+  }
+
+  h1 a,h2 a,h3 a {
+    text-decoration:none;
+  }
+
+  h1,h2 {
+    margin-top:28px;
+  }
+
+  #sub-header, time {
+    color:#403c3b;
+    font-size:13px;
+  }
+
+  #sub-header {
+    margin: 0 4px;
+  }
+
+  #nav h1 a {
+    font-size:35px;
+    color:#1d1313;
+    line-height:120%;
+  }
+
+  .posts_listing a,#nav a {
+    text-decoration: none;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  ul li {
+    margin-left: 5px;
+  }
+
+  ul li {
+    list-style-type: none;
+  }
+  ul li:before {
+    content:"\00BB \0020";
+  }
+
+  #nav ul li:before, .posts_listing li:before {
+    content:'';
+    margin-right:0;
+  }
+
+  #content {
+    text-align:left;
+    width:100%;
+    font-size:15px;
+    padding:60px 0 80px;
+  }
+
+  #content h1,#content h2 {
+    margin-bottom:5px;
+  }
+
+  #content h2 {
+    font-size:25px;
+  }
+
+  #content .entry-content {
+    margin-top:15px;
+  }
+
+  #content time {
+    margin-left:3px;
+  }
+
+  #content h1 {
+    font-size:30px;
+  }
+
+  .highlight {
+    margin: 10px 0;
+  }
+
+  .posts_listing {
+    margin:0 0 50px;
+  }
+
+  .posts_listing li {
+    margin:0 0 25px 15px;
+  }
+
+  .posts_listing li a:hover,#nav a:hover {
+    text-decoration: underline;
+  }
+
+  #nav {
+    text-align:center;
+    position:static;
+    margin-top:60px;
+  }
+
+  #nav ul {
+    display: table;
+    margin: 8px auto 0 auto;
+  }
+
+  #nav li {
+    list-style-type:none;
+    display:table-cell;
+    font-size:15px;
+    padding: 0 20px;
+  }
+
+  #links {
+    margin: 50px 0 0 0;
+  }
+
+  #links :nth-child(2) {
+    float:right;
+  }
+
+  #not-found {
+    text-align: center;
+  }
+
+  #not-found a {
+    font-family:"Old Standard TT",serif;
+    font-size: 200px;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 225px;
+  }
+
+  @media (max-width: 750px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:28px;
+    }
+
+    #nav li {
+      font-size:13px;
+      padding: 0 15px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:50px;
+      font-size:14px;
+    }
+
+    #content h1 {
+      font-size:25px;
+    }
+
+    #content h2 {
+      font-size:22px;
+    }
+
+    .posts_listing li div {
+      font-size:12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    body {
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    #nav h1 a {
+      font-size:22px;
+    }
+
+    #nav li {
+      font-size:12px;
+      padding: 0 10px;
+    }
+
+    #content {
+      margin-top:0;
+      padding-top:20px;
+      font-size:12px;
+    }
+
+    #content h1 {
+      font-size:20px;
+    }
+
+    #content h2 {
+      font-size:18px;
+    }
+
+    .posts_listing li div{
+      font-size:12px;
+    }
+  }
+</style>
+
+
+    
+  </head>
+
+  <body>
+    <section id=nav>
+      <h1><a href="/"></a></h1>
+      <ul>
+        
+      </ul>
+    </section>
+
+
+<section id=content>
+  <h1> Pure Emacs-Lisp Init Skeleton </h1>
+
+  
+    <div id=sub-header>
+      April 2019 · 3 minute read
+    </div>
+  
+
+  <div class="entry-content">
+    <p>Last year as I migrated from Spacemacs to vanilla Emacs, I rewrote my
+configuration from scratch. At first I chose to use Org babel as I have grown
+accustomed to Org-mode already. However, I find it not quite handy after a
+while:</p>
+
+<ol>
+<li>At least 2 files are to be maintained (<code>init.el</code> &amp; <code>config.org</code>), which adds
+unnecessary complexity</li>
+<li><code>init.el</code> needs to tangle Org file with every changes. It gets slow as new
+packages are added</li>
+<li>Debugging is not intuitive. If I made any mistakes, error prompts will refer
+to character locations in the tangled lisp file instead of original Org file.</li>
+</ol>
+
+<p>I figured I don&rsquo;t really need full-feature Org-mode for a simple init file. Most
+of the time I&rsquo;m the only reader, so proper comments should suffice. What I
+really need is only easy navigation through the file, and for that <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a>
+comes to rescue.</p>
+
+<p>So here it is, a minimal skeleton for Emacs init.</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;;; init.el --- skeleton config  -*- lexical-binding: t; coding:utf-8; fill-column: 119 -*-</span>
+
+<span style="color:#228b22">;;; Commentary:</span>
+<span style="color:#228b22">;; A config template with minimal setups.  Use &#34;outshine-cycle-buffer&#34; (&lt;Tab&gt;</span>
+<span style="color:#228b22">;; and &lt;S-Tab&gt; in org style) to navigate through sections, and &#34;imenu&#34; to locate</span>
+<span style="color:#228b22">;; individual use-package definition.</span>
+
+<span style="color:#228b22">;;; Bootstrap</span>
+<span style="color:#228b22">;; Speed up startup time</span>
+(<span style="color:#658b00">setq</span> <span style="color:#00688b">package-enable-at-startup</span> <span style="color:#00688b">nil</span>
+      <span style="color:#00688b">message-log-max</span> <span style="color:#b452cd">16384</span>
+      <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">402653184</span>
+      <span style="color:#00688b">gc-cons-percentage</span> <span style="color:#b452cd">0.6</span>
+      <span style="color:#00688b">auto-window-vscroll</span> <span style="color:#00688b">nil</span>)
+(<span style="color:#00688b">add-hook</span> <span style="color:#cd5555">&#39;after-init-hook</span>
+          `(<span style="color:#658b00">lambda</span> ()
+             (<span style="color:#658b00">setq</span> <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">800000</span>
+                   <span style="color:#00688b">gc-cons-percentage</span> <span style="color:#b452cd">0.1</span>)
+             (<span style="color:#008b45">garbage-collect</span>)) <span style="color:#00688b">t</span>)
+
+<span style="color:#228b22">;; Initialize package.el</span>
+(<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;package</span>)
+(<span style="color:#00688b">add-to-list</span> <span style="color:#cd5555">&#39;package-archives</span>
+             &#39;(<span style="color:#cd5555">&#34;melpa&#34;</span> . <span style="color:#cd5555">&#34;https://melpa.org/packages/&#34;</span>))
+(<span style="color:#00688b">package-initialize</span>)
+
+<span style="color:#228b22">;; Bootstrap `use-package&#39;</span>
+(<span style="color:#658b00">setq-default</span> <span style="color:#00688b">use-package-always-ensure</span> <span style="color:#00688b">t</span> <span style="color:#228b22">; Auto-download package if not exists</span>
+              <span style="color:#00688b">use-package-always-defer</span> <span style="color:#00688b">t</span> <span style="color:#228b22">; Always defer load package to speed up startup time</span>
+              <span style="color:#00688b">use-package-verbose</span> <span style="color:#00688b">nil</span> <span style="color:#228b22">; Don&#39;t report loading details</span>
+              <span style="color:#00688b">use-package-expand-minimally</span> <span style="color:#00688b">t</span>  <span style="color:#228b22">; make the expanded code as minimal as possible</span>
+              <span style="color:#00688b">use-package-enable-imenu-support</span> <span style="color:#00688b">t</span>) <span style="color:#228b22">; Let imenu finds use-package definitions</span>
+(<span style="color:#658b00">unless</span> (<span style="color:#00688b">package-installed-p</span> <span style="color:#cd5555">&#39;use-package</span>)
+  (<span style="color:#00688b">package-refresh-contents</span>)
+  (<span style="color:#00688b">package-install</span> <span style="color:#cd5555">&#39;use-package</span>))
+(<span style="color:#658b00">eval-when-compile</span>
+  (<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;use-package</span>))
+
+(<span style="color:#658b00">use-package</span> <span style="color:#00688b">outshine</span>
+  <span style="color:#228b22">;; Easier navigation for source code file, especially this one.</span>
+  <span style="color:#658b00">:demand</span> <span style="color:#00688b">t</span>
+  <span style="color:#658b00">:bind</span> (<span style="color:#658b00">:map</span> <span style="color:#00688b">outshine-mode-map</span>
+              (<span style="color:#cd5555">&#34;&lt;S-iso-lefttab&gt;&#34;</span> . <span style="color:#00688b">outshine-cycle-buffer</span>)
+              (<span style="color:#cd5555">&#34;&lt;backtab&gt;&#34;</span> . <span style="color:#00688b">outshine-cycle-buffer</span>)) <span style="color:#228b22">;; For Windows</span>
+  <span style="color:#658b00">:hook</span> (<span style="color:#00688b">emacs-lisp-mode</span> . <span style="color:#00688b">outshine-mode</span>)
+  )
+
+<span style="color:#228b22">;; Add all your use-package definitions here</span>
+
+<span style="color:#228b22">;; When config gets stable, using emacs server may be more convenient</span>
+<span style="color:#228b22">;; (require &#39;server)</span>
+<span style="color:#228b22">;; (unless (server-running-p)</span>
+<span style="color:#228b22">;;   (server-start))</span>
+
+<span style="color:#228b22">;;; init.el ends here</span></code></pre></div>
+<p>Main features:</p>
+
+<ol>
+<li>Use <code>outshine</code> for cycling visibility just like in Org-mode</li>
+<li>Apply speed up techniques (taken from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley&rsquo;s config</a>)</li>
+<li>Use <code>imenu/counsel-imenu</code> for easy navigation</li>
+</ol>
+
+<p>It&rsquo;s much easier to navigate to different sections and to individual package
+now. From there I base all my configuration using <code>use-package</code>, and achieves a
+startup time of 2.4s with 100+ packages (Main trick: use <code>:defer [N]</code> to
+defer-load all non-necessary packages. The really must-haves for me are only
+<code>counsel</code> and <code>org</code>). Hope that&rsquo;s useful for anyone thinking to rewrite their own
+configs.</p>
+
+  </div>
+
+  <div id=links>
+    
+      <a class="basic-alignment left" href="http://yiufung.net/post/emacs-key-binding-conventions-and-why-you-should-try-it/">&laquo; Learning Emacs Key Bindings</a>
+    
+    
+  </div>
+</section>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-48523088-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
+
+
+

@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Sat, 15 Dec 2018 22:48:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 16:07:57 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,21 @@
     <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Sat, 15 Dec 2018 22:48:13 +0800</pubDate>
+      <pubDate>Fri, 19 Apr 2019 16:07:57 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
-You may reach me via email.</description>
+You may reach me via email. My PGP key is 65E5C51E89731EED.</description>
+    </item>
+    
+    <item>
+      <title>Pure Emacs-Lisp Init Skeleton</title>
+      <link>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</link>
+      <pubDate>Fri, 19 Apr 2019 15:39:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</guid>
+      <description>Last year as I migrated from Spacemacs to vanilla Emacs, I rewrote my configuration from scratch. At first I chose to use Org babel as I have grown accustomed to Org-mode already. However, I find it not quite handy after a while:
+ At least 2 files are to be maintained (init.el &amp;amp; config.org), which adds unnecessary complexity init.el needs to tangle Org file with every changes. It gets slow as new packages are added Debugging is not intuitive.</description>
     </item>
     
     <item>
