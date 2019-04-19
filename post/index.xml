@@ -17,8 +17,8 @@
       <pubDate>Fri, 19 Apr 2019 15:39:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</guid>
-      <description>Last year as I migrated from Spacemacs to vanilla Emacs, I rewrote my configuration from scratch. At first I chose to use Org babel as I have grown accustomed to Org-mode already. However, I find it not quite handy after a while:
- At least 2 files are to be maintained (init.el &amp;amp; config.org), which adds unnecessary complexity init.el needs to tangle Org file with every changes. It gets slow as new packages are added Debugging is not intuitive.</description>
+      <description>Last year as I migrated from Spacemacs to vanilla Emacs, I rewrote my configuration from scratch. At first I chose to use Org babel, the literate programming style. After a while, however, I find it not as handy as expected:
+ At least 2 files are to be maintained (init.el &amp;amp; config.org), which is unnecessary complexity init.el needs to tangle the whole Org file for every single change, which gets slow as code blocks accumulated, and gets annoying when experimenting with new package Debugging is not intuitive.</description>
     </item>
     
     <item>
