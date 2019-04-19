@@ -58,26 +58,26 @@ if (!doNotTrack) {
   </div>
   <div class="blog-post-content">
     <p>Last year I rewrote my configuration from scratch as I migrated from Spacemacs
-to vanilla Emacs. At first I chose to use Org babel, the literate programming
+to vanilla Emacs. At first I chose to use Org Babel, the literate programming
 style. After a while, however, I find it not as handy as expected:</p>
 
 <ol>
-<li>At least 2 files are to be maintained (<code>init.el</code> &amp; <code>config.org</code>), which is
+<li>At least 2 files are to be maintained (<code>init.el</code> &amp; <code>config.org</code>), which adds
 unnecessary complexity</li>
-<li><code>init.el</code> needs to tangle the whole Org file for every single change, which
+<li><code>init.el</code> needs to re-tangle the whole Org file for every single change, which
 gets slow as code blocks accumulated, and gets annoying when experimenting
 with new package</li>
 <li>Debugging is not intuitive. If I made any mistake (miss a parenthesis, typo),
-error prompts will refer to locations in the tangled lisp file instead of
+error prompts will refer to locations in the tangled Lisp file instead of
 original Org file</li>
 </ol>
 
-<p>I figured I don&rsquo;t really need full-featured Org-mode for a simple init
-file. What I really need is easy cycling navigation through the file, and, as I
-mainly use <code>use-package</code>, the ability to jump to a <code>use-package</code> definition by name
-directly. After a little research, I found that for the former <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a> comes
-to rescue, and for the latter, <code>use-package</code> provides a useful option
-<code>use-package-enable-imenu-support</code>.</p>
+<p>I figured I don&rsquo;t really need full-featured Org-mode (scheduling, deadlines,
+agenda, etc..) for a simple init file.  What I really need is easy cycling
+navigation through the file, and, as I mainly use <code>use-package</code>, the ability to
+jump to a <code>use-package</code> definition by name directly. After a little research, I
+found that for the former <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a> comes to rescue, and for the latter,
+<code>use-package</code> provides a useful option <code>use-package-enable-imenu-support</code>.</p>
 
 <p>So here it is, a minimal skeleton for Emacs init.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;;; init.el --- skeleton config  -*- lexical-binding: t; coding:utf-8; fill-column: 119 -*-</span>
