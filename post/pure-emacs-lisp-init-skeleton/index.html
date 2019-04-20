@@ -90,11 +90,8 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 
 <span style="color:#228b22">;;; Bootstrap</span>
 <span style="color:#228b22">;; Speed up startup</span>
-(<span style="color:#658b00">setq</span> <span style="color:#00688b">package-enable-at-startup</span> <span style="color:#00688b">nil</span>
-      <span style="color:#00688b">message-log-max</span> <span style="color:#b452cd">16384</span>
-      <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">402653184</span>
-      <span style="color:#00688b">gc-cons-percentage</span> <span style="color:#b452cd">0.6</span>
-      <span style="color:#00688b">auto-window-vscroll</span> <span style="color:#00688b">nil</span>)
+(<span style="color:#658b00">setq</span> <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">402653184</span>
+      <span style="color:#00688b">gc-cons-percentage</span> <span style="color:#b452cd">0.6</span>)
 (<span style="color:#00688b">add-hook</span> <span style="color:#cd5555">&#39;after-init-hook</span>
           `(<span style="color:#658b00">lambda</span> ()
              (<span style="color:#658b00">setq</span> <span style="color:#00688b">gc-cons-threshold</span> <span style="color:#b452cd">800000</span>
@@ -119,6 +116,10 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 (<span style="color:#658b00">eval-when-compile</span>
   (<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;use-package</span>))
 
+<span style="color:#228b22">;; Add system settings here, for example</span>
+<span style="color:#228b22">;; (setq-default inhibit-startup-message t</span>
+<span style="color:#228b22">;;               initial-scratch-message nil)</span>
+
 <span style="color:#228b22">;; Add all use-package definitions from here</span>
 
 (<span style="color:#658b00">use-package</span> <span style="color:#00688b">outshine</span>
@@ -140,7 +141,7 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 <ol>
 <li>Use <code>outshine</code> for cycling visibility in Org-mode style</li>
 <li>Use <code>imenu/counsel-imenu</code> to locate individual package configuration</li>
-<li>Apply speed up techniques (taken from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley&rsquo;s config</a>)</li>
+<li>Apply speed up techniques (modified from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley&rsquo;s config</a>)</li>
 </ol>
 
 <p>From there I base all my configurations using <code>use-package</code>, and have a startup
