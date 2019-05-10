@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Sat, 20 Apr 2019 09:12:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 15:41:24 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +14,21 @@
     <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Sat, 20 Apr 2019 09:12:30 +0800</pubDate>
+      <pubDate>Fri, 10 May 2019 15:41:24 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
 You may reach me via email.</description>
+    </item>
+    
+    <item>
+      <title>Org-mode Hidden Gems</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-part1/</link>
+      <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-part1/</guid>
+      <description>Org-mode has completely changed the way I organize my life in the past year. I started to read Org-mode manual recently and it surprises me there are so many useful options I didn&amp;rsquo;t know, so I&amp;rsquo;d like to share some of them here.
+I&amp;rsquo;ll show how each of the options is useful for me, accompanied with a GIF to show effects. A man&amp;rsquo;s Emacs is his own castle, so do customize it for your own good.</description>
     </item>
     
     <item>

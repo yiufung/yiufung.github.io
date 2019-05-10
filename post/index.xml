@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Fri, 19 Apr 2019 15:39:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 11:25:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Org-mode Hidden Gems</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-part1/</link>
+      <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-part1/</guid>
+      <description>Org-mode has completely changed the way I organize my life in the past year. I started to read Org-mode manual recently and it surprises me there are so many useful options I didn&amp;rsquo;t know, so I&amp;rsquo;d like to share some of them here.
+I&amp;rsquo;ll show how each of the options is useful for me, accompanied with a GIF to show effects. A man&amp;rsquo;s Emacs is his own castle, so do customize it for your own good.</description>
+    </item>
     
     <item>
       <title>Pure Emacs-Lisp Init Skeleton</title>

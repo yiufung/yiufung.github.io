@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>About</title>
+        <title>Org-mode Hidden Gems</title>
         
 <script type="application/javascript">
 var doNotTrack = false;
@@ -37,7 +37,7 @@ if (!doNotTrack) {
             <div class="navbar-nav ml-auto text-center">
               
               
-              <a class="nav-item nav-link active" href="/about/">About</a>
+              <a class="nav-item nav-link " href="/about/">About</a>
               <a class="nav-item nav-link " href="/">Home</a>
             </div>
           </div>
@@ -52,15 +52,83 @@ if (!doNotTrack) {
 
 
 <div class="blog-post">
-  <h1>About</h1>
+  <h1>Org-mode Hidden Gems</h1>
   <div class="blog-post-subheader">
     <time>10 May 2019</time>
   </div>
   <div class="blog-post-content">
-    <p>My name is Cheong Yiufung. I&rsquo;m a data scientist based in Hong
-Kong. Here I post some of my thoughts.</p>
+    
 
-<p>You may reach me via <a href="mailto:cheongyiufung@gmail.com">email</a>.</p>
+<p>Org-mode has completely changed the way I organize my life in the past year. I
+started to read Org-mode manual recently and it surprises me there are so many
+useful options I didn&rsquo;t know, so I&rsquo;d like to share some of them here.</p>
+
+<p>I&rsquo;ll show how each of the options is useful for me, accompanied with a GIF to
+show effects. A man&rsquo;s Emacs is his own castle, so do customize it for your own
+good. When in doubt, <code>C-h v</code> and <code>C-h f</code> are always your friends.</p>
+
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+<ul>
+<li><a href="#avoid-accidentally-editing-texts-in-invisible-area--dot-dot-dot">Avoid accidentally editing texts in invisible area (<code>...</code>)</a></li>
+<li><a href="#show-headings-only">Show headings only</a></li>
+<li><a href="#clone-trees-with-time-shifts">Clone trees with time shifts</a></li>
+<li><a href="#in-collapsed-view-hide-empty-lines-between-subtrees">In collapsed view, hide empty lines between subtrees</a></li>
+</ul>
+
+<p></div>
+<!--endtoc--></p>
+
+<h2 id="avoid-accidentally-editing-texts-in-invisible-area--dot-dot-dot">Avoid accidentally editing texts in invisible area (<code>...</code>)</h2>
+
+<p>When text is inserted near invisible area, I&rsquo;m never sure what exactly is
+changed. Usually I would expand it to check, only to end up losing my focus
+during panic <code>TAB</code> ing.</p>
+
+<p>Set <code>org-catch-invisible-edits</code> to <code>error</code> to prevent editing invisible area,
+showing an error message in echo area instead. I prefer <code>show-and-error</code>, which
+automatically expand apart from the notice so I can keep typing.</p>
+
+<figure>
+    <img src="/ox-hugo/org-catch-invisible-edits.gif" width="800px"/> 
+</figure>
+
+
+<h2 id="show-headings-only">Show headings only</h2>
+
+<p>Usually I would have some texts under a tree right before its subtrees. This
+could be visually disturbing when I <code>TAB</code> through trying to glance at tree
+structure. All I want is only the headings. In this case,
+<code>org-kill-note-or-show-branches</code> (bound to <code>C-c C-k</code>) comes in handy.</p>
+
+<figure>
+    <img src="/ox-hugo/outline-show-branches.gif" width="800px"/> 
+</figure>
+
+
+<h2 id="clone-trees-with-time-shifts">Clone trees with time shifts</h2>
+
+<p>Bound to <code>C-c C-x c</code>, <code>org-clone-subtree-with-time-shift</code> create multiple subtrees
+with timestamps shifted (<code>+3d</code> in the example). Useful for creating tree
+structures for repeated tasks in the future.</p>
+
+<figure>
+    <img src="/ox-hugo/org-clone-subtree-with-time-shift.gif" width="800px"/> 
+</figure>
+
+
+<h2 id="in-collapsed-view-hide-empty-lines-between-subtrees">In collapsed view, hide empty lines between subtrees</h2>
+
+<p>Set <code>org-cycle-separator-lines</code> to <code>0</code>. Gives a more compact and consistent view,
+especially in a large Org file.</p>
+
+<figure>
+    <img src="/ox-hugo/org-cycle-separator-lines.gif" width="800px"/> 
+</figure>
+
 
   </div>
   <div id="disqus_thread"></div>
