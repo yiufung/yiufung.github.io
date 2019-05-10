@@ -59,23 +59,25 @@ if (!doNotTrack) {
   <div class="blog-post-content">
     
 
-<p>Org-mode has completely changed the way I organize my life in the past year. I
-started to read Org-mode manual recently and it surprises me there are so many
-useful options I didn&rsquo;t know, so I&rsquo;d like to share some of them here.</p>
+<p>I have been using Org for a year now, and it never fails to impress me with its
+versatility. Recently I started to read Org-mode manual, and it surprises me
+there are so many useful options/commands I didn&rsquo;t know before, so I&rsquo;d like to
+share some of them here.</p>
 
-<p>I&rsquo;ll show how each of the options is useful for me, accompanied with a GIF to
-show effects. A man&rsquo;s Emacs is his own castle, so do customize it for your own
-good. When in doubt, <code>C-h v</code> and <code>C-h f</code> are always your friends.</p>
+<p>Each option/command is accompanied with a GIF to demonstrate its usefulness.
+Settings are based on my preference, but a man&rsquo;s Emacs is his own castle, so do
+customize it for your own good. When in doubt, <code>C-h v</code> and <code>C-h f</code> are always your
+friends.</p>
 
-<h2 id="avoid-accidentally-editing-texts-in-invisible-area--dot-dot-dot">Avoid accidentally editing texts in invisible area (<code>...</code>)</h2>
+<h2 id="avoid-accidentally-editing-texts-in-invisible-area">Avoid accidentally editing texts in invisible area</h2>
 
-<p>When text is inserted near invisible area, I&rsquo;m never sure what exactly is
-changed. Usually I would expand it to check, only to end up losing my focus
-during panic <code>TAB</code> ing.</p>
+<p>When text is inserted near invisible area (<code>...</code>), I&rsquo;m never sure what exactly is
+changed. Usually I would expand to check, only to end up losing my focus during
+panic <code>TAB</code> ing.</p>
 
 <p>Set <code>org-catch-invisible-edits</code> to <code>error</code> to prevent editing invisible area,
 showing an error message in echo area instead. I prefer <code>show-and-error</code>, which
-automatically expand apart from the notice so I can keep typing.</p>
+automatically expand and move focus apart from the notice.</p>
 
 <figure>
     <img src="/ox-hugo/org-catch-invisible-edits.gif" width="800px"/> 
@@ -86,7 +88,7 @@ automatically expand apart from the notice so I can keep typing.</p>
 
 <p>Usually I would have some texts under a tree right before its subtrees. This
 could be visually disturbing when I <code>TAB</code> through trying to glance at tree
-structure. All I want is only the headings. In this case,
+structure. All I want is the headings. In this case,
 <code>org-kill-note-or-show-branches</code> (bound to <code>C-c C-k</code>) comes in handy.</p>
 
 <figure>
@@ -112,6 +114,15 @@ especially in a large Org file.</p>
 
 <figure>
     <img src="/ox-hugo/org-cycle-separator-lines.gif" width="800px"/> 
+</figure>
+
+
+<h2 id="turn-plain-list-into-subtrees">Turn plain list into subtrees</h2>
+
+<p><code>org-list-make-subtree</code> (bound to <code>C-c C-*</code>).</p>
+
+<figure>
+    <img src="/ox-hugo/org-list-make-subtrees.gif" width="800px"/> 
 </figure>
 
 
