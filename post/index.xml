@@ -13,16 +13,6 @@
     
     <item>
       <title>Org-mode Hidden Gems</title>
-      <link>http://yiufung.net/post/org-mode-hidden-gems-part1/</link>
-      <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
-      
-      <guid>http://yiufung.net/post/org-mode-hidden-gems-part1/</guid>
-      <description>I have been using Org for a year now, and it never fails to impress me with its versatility. Recently I started to read Org-mode manual, and it surprises me there are so many useful options/commands I didn&amp;rsquo;t know before, so I&amp;rsquo;d like to share some of them here.
-Each option/command is accompanied with a GIF to demonstrate its usefulness. Settings are based on my preference, but a man&amp;rsquo;s Emacs is his own castle, so do customize it for your own good.</description>
-    </item>
-    
-    <item>
-      <title>Org-mode Hidden Gems</title>
       <link>http://yiufung.net/post/org-mode-hidden-gems-pt1/</link>
       <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
       
