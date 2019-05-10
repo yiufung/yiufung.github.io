@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Org-mode Hidden Gems</title>
+        <title>Org-mode Hidden Gems: Document Structure</title>
         
 <script type="application/javascript">
 var doNotTrack = false;
@@ -52,7 +52,7 @@ if (!doNotTrack) {
 
 
 <div class="blog-post">
-  <h1>Org-mode Hidden Gems</h1>
+  <h1>Org-mode Hidden Gems: Document Structure</h1>
   <div class="blog-post-subheader">
     <time>10 May 2019</time>
   </div>
@@ -124,6 +124,32 @@ especially in a large Org file.</p>
     <img src="/ox-hugo/org-list-make-subtrees.gif" width="100%"/> 
 </figure>
 
+
+<h2 id="demote-sequence-for-list-bullets">Demote sequence for list bullets</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-demote-modify-bullet</span> &#39;((<span style="color:#cd5555">&#34;+&#34;</span> . <span style="color:#cd5555">&#34;-&#34;</span>) (<span style="color:#cd5555">&#34;-&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>) (<span style="color:#cd5555">&#34;*&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>)))</code></pre></div>
+<figure>
+    <img src="/ox-hugo/org-list-demote-modify-bullet.gif" width="100%"/> 
+</figure>
+
+
+<h2 id="miscellaneous">Miscellaneous</h2>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;; Increase sub-item indentation</span>
+(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-indent-offset</span> <span style="color:#b452cd">1</span>)</code></pre></div>
+<p>And I only learn the existence of <code>Description list</code> today. Writing:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#8b008b;font-weight:bold">- Emacs ::</span> An extensible, customizable, free/libre text editor
+<span style="color:#8b008b;font-weight:bold">- Org-mode ::</span> Keeping notes, maintaining TODO lists, planning projects, and
+  authoring documents with a fast and effective plain-text system</code></pre></div>
+<p>generates:</p>
+
+<blockquote>
+<dl>
+<dt>Emacs</dt>
+<dd>An extensible, customizable, free/libre text editor</dd>
+<dt>Org-mode</dt>
+<dd>Keeping notes, maintaining TODO lists, planning projects, and
+authoring documents with a fast and effective plain-text system</dd>
+</dl>
+</blockquote>
 
   </div>
   <div id="disqus_thread"></div>
