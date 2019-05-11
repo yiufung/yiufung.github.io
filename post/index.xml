@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Sat, 11 May 2019 23:14:39 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 23:23:08 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Org-mode Hidden Gems - 02 Tables</title>
       <link>http://yiufung.net/post/org-mode-hidden-gems-pt2/</link>
-      <pubDate>Sat, 11 May 2019 23:14:39 +0800</pubDate>
+      <pubDate>Sat, 11 May 2019 23:23:08 +0800</pubDate>
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt2/</guid>
       <description>This is the 2nd post of Org-mode Hidden Gems series. Read 01 Document Structure.
@@ -29,7 +29,7 @@ This command rely on detecting delimiter TAB or comma in region. If conversion f
       <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt1/</guid>
-      <description>Recently I started to read Org-mode manual, and it surprises me there are so many useful options/commands I wasn&amp;rsquo;t aware of even after using it daily for the past year, so I&amp;rsquo;d like to share some of the findings here.
+      <description>Recently I started to read Org mode manual, and it surprises me there are so many useful options/commands I wasn&amp;rsquo;t aware of even after using it daily for the past year, so I&amp;rsquo;d like to share some of the findings here.
 Each option/command is accompanied with a short demo video. Settings are based on my preference, but as the old saying goes, &amp;ldquo;a man&amp;rsquo;s Emacs is his own castle&amp;rdquo;, so do customize it for your own good.</description>
     </item>
     
