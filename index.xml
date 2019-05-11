@@ -6,15 +6,27 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Sat, 11 May 2019 10:20:57 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 19:29:50 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Org-mode Hidden Gems - 02 Tables</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-pt2/</link>
+      <pubDate>Sat, 11 May 2019 19:29:50 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-pt2/</guid>
+      <description>This is the 2nd post of Org-mode Hidden Gems series. Read 01 Document Structure.
+Region operations on cells Excel-like copy-pasting: C-c C-x M-w(copy)/C-w(cut)/C-y(paste).
+ Create table from region Bound to C-c |, org-table-create-or-convert-from-region converts semi-formatted texts (esp. those copied from web) into Org table.
+This command rely on detecting delimiter TAB or comma in region. If conversion fails, check any minor modes or settings that may turn TAB character into space in the background.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Sat, 11 May 2019 10:20:57 +0800</pubDate>
+      <pubDate>Sat, 11 May 2019 19:18:33 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Org-mode Hidden Gems - 02 Tables</title>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-48523088-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/stylesheet.css">
+        
+        
+        
+    </head>
+    <body>
+      <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light">
+
+          
+          <span class="navbar-brand mb-0 h1"></span>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation" name="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto text-center">
+              
+              
+              <a class="nav-item nav-link " href="/about/">About</a>
+              <a class="nav-item nav-link " href="/">Home</a>
+            </div>
+          </div>
+        </nav>
+
+        
+        
+        
+        
+        
+        
+
+
+<div class="blog-post">
+  <h1>Org-mode Hidden Gems - 02 Tables</h1>
+  <div class="blog-post-subheader">
+    <time>11 May 2019</time>
+  </div>
+  <div class="blog-post-content">
+    
+
+<p>This is the 2nd post of Org-mode Hidden Gems series. Read <a href="https://yiufung.net/post/org-mode-hidden-gems-pt1/">01 Document Structure</a>.</p>
+
+<h2 id="region-operations-on-cells">Region operations on cells</h2>
+
+<p>Excel-like copy-pasting: <code>C-c C-x M-w(copy)/C-w(cut)/C-y(paste)</code>.</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/org-table-rectangle.mp4" type="video/mp4" />
+  <source src="/ox-hugo/org-table-rectangle.webm" type="video/webm" />
+</video>
+
+
+<h2 id="create-table-from-region">Create table from region</h2>
+
+<p>Bound to <code>C-c |</code>, <code>org-table-create-or-convert-from-region</code> converts semi-formatted
+ texts (esp. those copied from web) into Org table.</p>
+
+<p>This command rely on detecting delimiter <code>TAB</code> or comma in region. If conversion
+fails, check any minor modes or settings that may turn <code>TAB</code> character into space
+in the background. In my case, it&rsquo;s <a href="https://github.com/purcell/whitespace-cleanup-mode"><code>whitespace-cleanup-mode</code></a>. This can get
+tricky if enabled along with <code>auto-save-mode</code>, as copied text might be auto-saved
+and <code>TABs</code> stripped before conversion. A workaround is to disable them
+temporarily.</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/org-table-create-or-convert-from-region.mp4" type="video/mp4" />
+  <source src="/ox-hugo/org-table-create-or-convert-from-region.webm" type="video/webm" />
+</video>
+
+
+<h2 id="special-marking-characters-for-tables">Special Marking Characters for Tables</h2>
+
+<p><a href="https://orgmode.org/manual/Advanced-features.html">Advanced Features</a> demonstrates how to use special marking characters to enable
+two desired features: assigning names to rows/columns/fields, and automatic
+recalculation of fields.</p>
+
+<p>It is easier to follow the examples in Emacs with proper highlighting, than in
+HTML/Info in B&amp;W, do give it a try. Here I copy the table to show it in action.
+Key take-aways:</p>
+
+<ul>
+<li>Special marking characters shall occupy the first column</li>
+<li>Name columns/rows in a human-readable way with <code>!</code>, <code>^</code>, <code>_</code> (No more counting, no
+more <code>C-c ?</code> to locate reference)</li>
+<li>Control automatic recalculation with <code>#</code> and <code>*</code></li>
+<li>Define per-table parameters/constants in unused cells with <code>$</code></li>
+</ul>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/tables-advanced-features-special-marking-characters.mp4" type="video/mp4" />
+  <source src="/ox-hugo/tables-advanced-features-special-marking-characters.webm" type="video/webm" />
+</video>
+
+
+<p>I was confused by table references and haven&rsquo;t used much of calculation features
+before, but this section is quite enlightening. I think I&rsquo;ll use it more later.</p>
+
+<p>That concludes Tables chapter.</p>
+
+<h2 id="behind-the-scene-bulk-video-conversion-with-dired">Behind the Scene: Bulk Video Conversion with Dired</h2>
+
+<p>Not being a web guru, I didn&rsquo;t know Safari can&rsquo;t handle <code>webm</code> properly and was
+reminded (by kind /u/Bombastry) after migrating all videos from original <code>gif</code> to
+<code>webm</code>. After a little research, I decided to ditch <code>gif</code> and provide <code>mp4</code> as primary
+source, which should work for all browsers. <code>webm</code> is used as fallback.</p>
+
+<p>Now I&rsquo;ve got a bunch of <code>webm</code> in hand and need to generate <code>mp4</code>. Some digging
+gives me this <code>ffmpeg</code> command to perform conversion:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i input.webm -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> output.mp4</code></pre></div>
+<p>works great, how do I apply to each individual <code>webm</code> though? Could write a bash
+script, but it would take a while to remind myself of its syntax; could copy
+file names from dired and use some rectangle editing hacks (I tried, as you will
+see at the start of video)&hellip; but that&rsquo;s a lot of editing.</p>
+
+<p>Then I read <code>dired-do-shell-command</code> (bound to <code>!</code>) and found this:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nil" data-lang="nil">If there is no ‘*’, but there is a ‘?’ in COMMAND, surrounded by whitespace, or
+a ‘`?`’ this runs COMMAND on each file individually with the file name
+substituted for ‘?’ or ‘`?`’.</code></pre></div>
+<p>Almost cryptic, but essentially it allows running a command on individual marked
+files. Combined with <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/emacs/Wdired.html"><code>wdired</code></a>, this turns out to be quite a smooth flow:</p>
+
+<ol>
+<li>Mark files to run command on: use <code>m</code> or <code>dired-mark-extension</code> (bound to <code>* .</code> )</li>
+<li><code>!</code> to run conversions (<code>&amp;</code> to run asynchronously), using <code>?</code> or <code>`?`</code> to refer to
+original file name</li>
+<li>Toggle on <code>wdired</code> (<code>C-x C-q</code>) and fix suffixes with <code>query-replace</code> (<code>M-%</code>)</li>
+</ol>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/bulk-conversion-dired.mp4" type="video/mp4" />
+  <source src="/ox-hugo/bulk-conversion-dired.webm" type="video/webm" />
+</video>
+
+
+<p>Not Org-mode related, just thought it&rsquo;s a cool pipeline. Recorded as a macro,
+this could be a one-click bulk conversion tool for videos. Emacs does have some
+plain text magics!</p>
+
+  </div>
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yiufung" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+      <footer>
+        <hr>
+        <small>
+          <div class="word">"then we shall see face to face"</div>
+        </small>
+      </footer>
+    </div> 
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
+
