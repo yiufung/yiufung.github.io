@@ -131,12 +131,12 @@ primary source, which should work for all browsers. <code>webm</code> is used as
 <p>Now I&rsquo;ve got a bunch of <code>webm</code> in hand and need to generate <code>mp4</code>. Some digging
 gives me this <code>ffmpeg</code> command to perform conversion:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i input.webm -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> output.mp4</code></pre></div>
-<p>works great, how do I apply to each individual <code>webm</code> though? Could write a bash
-script, but it would take a while to remind myself of its syntax; could copy
-file names from dired and use some rectangle editing hacks (I tried, as you will
-see at the start of video)&hellip; but that&rsquo;s a lot of editing.</p>
+<p>works great, how do I apply to each individual <code>webm</code> though? I don&rsquo;t feel like
+writing bash script (take time to remember syntax), nor copy file names from
+dired and use rectangle editing hacks (lots of editing, you will see my attempt
+at the beginning of video).</p>
 
-<p>Then I read <code>dired-do-shell-command</code> (bound to <code>!</code>) and found this:</p>
+<p>Then I notice this line in <code>dired-do-shell-command</code> (bound to <code>!</code>):</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nil" data-lang="nil">If there is no ‘*’, but there is a ‘?’ in COMMAND, surrounded by whitespace, or
 a ‘`?`’ this runs COMMAND on each file individually with the file name
 substituted for ‘?’ or ‘`?`’.</code></pre></div>
@@ -159,6 +159,9 @@ original file name</li>
 <p>Not Org-mode related, just thought it&rsquo;s a cool pipeline. Recorded as a macro,
 this could be a one-click bulk conversion tool for videos. Emacs does have some
 plain text magics!</p>
+
+<p>PS: If you know how to refer to filename <strong>without</strong> the suffix, please let me know,
+this would simplify it even further.</p>
 
   </div>
   <div id="disqus_thread"></div>
