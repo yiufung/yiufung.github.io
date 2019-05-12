@@ -126,8 +126,8 @@ before, but this section is quite enlightening. I think I&rsquo;ll use it more l
 
 <p>Not being a web guru, I didn&rsquo;t know Safari can&rsquo;t handle <code>webm</code> properly and was
 reminded (by /u/Bombastry, thanks) after migrating all videos from original <code>gif</code>
-to <code>webm</code>. Long story short, I decided to use <code>mp4</code> as primary source. Now I&rsquo;ve got
-a bunch of <code>webm</code> in hand, how do I generate corresponding <code>mp4</code>?</p>
+to <code>webm</code>. So I decided to use <code>mp4</code> as primary source. Now I&rsquo;ve got a bunch of <code>webm</code>
+in hand, how do I generate corresponding <code>mp4</code>?</p>
 
 <p>First I need an <code>ffmpeg</code> command. It&rsquo;s one search away:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i input.webm -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> output.mp4</code></pre></div>
