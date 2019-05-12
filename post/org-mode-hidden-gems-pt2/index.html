@@ -132,7 +132,7 @@ in hand, how do I generate corresponding <code>mp4</code>?</p>
 <p>First I need an <code>ffmpeg</code> command. It&rsquo;s one search away:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i input.webm -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> output.mp4</code></pre></div>
 <p>Works fine, how do I apply to each individual <code>webm</code> though? I don&rsquo;t feel like
-writing bash script (take time to remember syntax), nor copy file names from
+writing bash script (takes time to remember syntax), nor copy file names from
 dired and use rectangle editing hacks (lots of editing, you will see my attempt
 at the beginning of video).</p>
 
