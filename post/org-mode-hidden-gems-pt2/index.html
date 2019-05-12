@@ -145,10 +145,11 @@ substituted for ‘?’ or ‘`?`’.</code></pre></div>
 files. Combined with <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/emacs/Wdired.html"><code>wdired</code></a>, this turns out to be quite a smooth flow:</p>
 
 <ol>
-<li>Mark files: use <code>dired-mark-extension</code> (bound to <code>* .</code>)</li>
-<li>Run command: press <code>!</code> (or use <code>&amp;</code> to run asynchronously), fill in command, using
-<code>?</code> and <code>`?`</code> to refer to file name</li>
-<li>Fix suffixes: toggle on <code>wdired</code> (<code>C-x C-q</code>) + <code>query-replace</code> (<code>M-%</code>)</li>
+<li>Mark files: individually with <code>m</code>, or in one go with <code>dired-mark-extension</code>
+(bound to <code>* .</code>, you&rsquo;ll need <code>dired-x</code>)</li>
+<li>Run command: <code>!</code> (or <code>&amp;</code> to run asynchronously), fill in command, using <code>?</code> and <code>`?`</code>
+to refer to file name</li>
+<li>Fix suffixes: toggle on <code>wdired</code> (<code>C-x C-q</code>) and <code>query-replace</code> (<code>M-%</code>)</li>
 </ol>
 
 <video width="100%" controls loop muted playsinline preload="metadata">
