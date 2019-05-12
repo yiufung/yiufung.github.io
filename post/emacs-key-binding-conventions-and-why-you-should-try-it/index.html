@@ -63,49 +63,44 @@ if (!doNotTrack) {
   <div class="blog-post-content">
     
 
-<p>This post describes my method to learn Emacs native keybindings from
-an ex-Vimmer&rsquo;s perspective. It&rsquo;s an extension from <a href="https://www.reddit.com/r/emacs/comments/a5j3lc/emacs%5Fkey%5Fbinding%5Fconventions%5Fand%5Fwhy%5Fyou%5Fshould/">a Reddit
-post</a>.</p>
+<p>This post describes my method to learn Emacs native keybindings from an
+ex-Vimmer&rsquo;s perspective. It&rsquo;s an extension from <a href="https://www.reddit.com/r/emacs/comments/a5j3lc/emacs%5Fkey%5Fbinding%5Fconventions%5Fand%5Fwhy%5Fyou%5Fshould/">a Reddit post</a>.</p>
 
 <hr />
 
 <h2 id="evil-mode-journey">Evil-mode journey</h2>
 
-<p>My Emacs journey started with Spacemacs. At that time, I had the
-misconception that Emacs has lengthy and incomprehensible keybindings,
-so without a second thought, I chose to go with Vim-bindings, which I
-used for 6 years and even read a book about. Spacemacs is surely a
-great project, opening up all the goodies of Emacs to a Vimmer. The
-iconic mnemonics system is effective, at least at the very
-beginning. However, over time I found that:</p>
+<p>My Emacs journey started with Spacemacs. At that time, I had the misconception
+that Emacs has lengthy and incomprehensible keybindings, so without a second
+thought, I chose to go with Vim-bindings, which I used for 6 years and even read
+a book about. Spacemacs is surely a great project, opening up all the goodies of
+Emacs to a Vimmer. The iconic mnemonics system is effective, at least at the
+very beginning. However, over time I found that:</p>
 
 <ol>
-<li><p>Mnemonics requires more key presses: <code>SPC f f</code> (3) vs <code>C-x</code> <code>C-f</code> (2
-keys, or 2.5?), <code>SPC h d f</code> (4) vs <code>C-h f</code> (2). Most search tools like
-<code>ag</code>, <code>rgrep</code> requires 4 key presses.  Most of the time we also need an
-extra <code>ESC</code> to enter normal state. Mistype rate is higher as a
-result, and gets frustrating quickly.</p></li>
+<li><p>Mnemonics requires more key presses: <code>SPC f f</code> (3) vs <code>C-x</code> <code>C-f</code> (2 keys, or
+2.5?), <code>SPC h d f</code> (4) vs <code>C-h f</code> (2). Most search tools like <code>ag</code>, <code>rgrep</code> requires
+4 key presses. Most of the time we also need an extra <code>ESC</code> to enter normal
+state. Mistype rate is higher as a result, and gets frustrating quickly.</p></li>
 
-<li><p>Commands from various packages are placed under same key prefix
-<code>SPC letter</code>, making it difficult to form an overall picture of what
-things each package does/can do, which is essential for
-customization in the long term.</p></li>
+<li><p>Commands from various packages are placed under same key prefix <code>SPC letter</code>,
+making it difficult to form an overall picture of what things each package
+does/can do, which is essential for customization in the long term.</p></li>
 
-<li><p>The consideration of how commands should be organized evolves over
-time, so user needs to adapt accordingly. I personally recommend my
-Spacemacs friends to watch <a href="https://www.youtube.com/watch?v=ZFV5EqpZ6%5Fs&amp;list=PLrJ2YN5y27KLhd3yNs2dR8%5FinqtEiEweE">Spacemacs ABC Series</a>, it&rsquo;s gorgeous, but
-recorded 3 years ago, many keybindings have changed since.</p></li>
+<li><p>The consideration of how commands should be organized evolves over time, so
+user needs to adapt accordingly. I personally recommend my Spacemacs friends
+to watch <a href="https://www.youtube.com/watch?v=ZFV5EqpZ6%5Fs&amp;list=PLrJ2YN5y27KLhd3yNs2dR8%5FinqtEiEweE">Spacemacs ABC Series</a>, it&rsquo;s gorgeous, but recorded 3 years ago, many
+keybindings have changed since.</p></li>
 </ol>
 
-<p>These problems gave me a headache, urging me to write my own config. I
-could have tried <code>evil-mode</code>, but having seen too many evil-mode-related
-compatibility issues in Spacemacs project, I did not think my poor
-Elisp skills can support me through the extra mess added on top of
-writing a config from scratch.</p>
+<p>These problems gave me a headache, urging me to write my own config. I could
+have tried <code>evil-mode</code>, but having seen too many evil-mode-related compatibility
+issues in Spacemacs project, I did not think my poor Elisp skills can support me
+through the extra mess added on top of writing a config from scratch.</p>
 
-<p>So the dilemma in front of me is: continue with Spacemacs mnemonics,
-or go with Emacs native bindings? I feel lucky now that I chose to
-give Emacs binding a try.</p>
+<p>So the dilemma in front of me is: continue with Spacemacs mnemonics, or go with
+Emacs native bindings? I feel lucky now that I chose to give Emacs binding a
+try.</p>
 
 <h2 id="demystifying-emacs-bindings">Demystifying Emacs bindings</h2>
 
@@ -118,8 +113,8 @@ incomprehensible. It has well-defined conventions listed at:</p>
 <p>In summary, the general rules are:</p>
 
 <ol>
-<li><code>C-x</code> reserved for Emacs native essential keybindings: buffer,
-window, frame, file, directory, etc&hellip;</li>
+<li><code>C-x</code> reserved for Emacs native essential keybindings: buffer, window, frame,
+file, directory, etc&hellip;</li>
 <li><code>C-c</code> reserved for user and major mode:
 
 <ul>
@@ -130,7 +125,7 @@ window, frame, file, directory, etc&hellip;</li>
 </ol>
 
 <figure>
-    <img src="/ox-hugo/emacs-mindmap.png"/> 
+    <img src="/ox-hugo/emacs-mindmap.png" width="100%"/> 
 </figure>
 
 
@@ -164,18 +159,17 @@ assigned to (k)ill-related commands in major-mode), <code>C-c M-w</code> (copy a
 syntactic unit in major-mode), etc. You will certainly notice more of
 these patterns.</p>
 
-<p>Of course there are exceptions: in the above example, the companion
-command for <code>org-insert-link</code> is <code>org-store-link</code>, which is <a href="https://orgmode.org/manual/Activation.html">suggested to
-bound to <code>C-c l</code></a>, occupying one of my customized binding space. But now
-at least 1) I know why it&rsquo;s not bound by default, and why it suggests
-this binding; 2) I know I have the freedom to bound to other
-keys. That&rsquo;s where one&rsquo;s customization starts off.</p>
+<p>Of course there are exceptions: in the above example, the companion command for
+<code>org-insert-link</code> is <code>org-store-link</code>, which is <a href="https://orgmode.org/manual/Activation.html">suggested to bound to <code>C-c l</code></a>,
+occupying one of my customized binding space. But now at least 1) I know why
+it&rsquo;s not bound by default, and why it suggests this binding; 2) I know I have
+the freedom to bound to other keys. That&rsquo;s where one&rsquo;s customization starts off.</p>
 
 <h2 id="dipping-the-water--or-making-the-jump">Dipping the water (or making the jump)</h2>
 
-<p>The debate over keybinding style is a never-ending one. Coming from a
-Vim background, I do miss the compositionality it provides. In terms
-of <strong>editing</strong> only, Vim is really hard to beat.</p>
+<p>The debate over keybinding style is a never-ending one. Coming from a Vim
+background, I do miss the compositionality it provides. In terms of <strong>editing</strong>
+only, Vim is hard to beat.</p>
 
 <p>Turning to Emacs, though, reveals to me a different philosophy where
 <strong>commands</strong> are first-class citizens. It seems to me that, instead of
@@ -210,7 +204,7 @@ terminals all day, its consistency with terminal bindings is also a
 huge plus.</p>
 
 <p>Hope these are useful for new Emacs users, or Vimmers/Spacemacsers who
-had never tried Emacs native key bindings. Now give it a go!</p>
+had never tried Emacs native key bindings.</p>
 
   </div>
   <div id="disqus_thread"></div>
