@@ -29,7 +29,7 @@
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt2/</guid>
       <description>This is the 2nd post of Org-mode Hidden Gems series.
- 01 Document Structure 02 Tables  Region operations on cells Excel-like copy-pasting: C-c C-x M-w(copy)/C-w(cut)/C-y(paste).
+Region operations on cells Excel-like copy-pasting: C-c C-x M-w(copy)/C-w(cut)/C-y(paste).
  Create table from region Bound to C-c |, org-table-create-or-convert-from-region converts semi-formatted texts (esp. those copied from web) into Org table.
 This command rely on detecting delimiter TAB or comma in region. If conversion fails, check any minor modes or settings that may turn TAB character into space in the background.</description>
     </item>
