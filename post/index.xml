@@ -19,7 +19,7 @@
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt3/</guid>
       <description>This is the 3rd post of Org-mode Hidden Gems series.
 Internal Link Summary Previously I seldom used anything other than URLs, and this chapter taught me more on Internal Link. Several things are summarized in the video:
- Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow to below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text  Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
+ Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text  Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
     </item>
     
     <item>

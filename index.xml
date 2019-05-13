@@ -6,7 +6,7 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Tue, 14 May 2019 00:30:38 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 00:34:35 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Tue, 14 May 2019 00:30:38 +0800</pubDate>
+      <pubDate>Tue, 14 May 2019 00:34:35 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
@@ -29,7 +29,7 @@ You may reach me via email.</description>
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt3/</guid>
       <description>This is the 3rd post of Org-mode Hidden Gems series.
 Internal Link Summary Previously I seldom used anything other than URLs, and this chapter taught me more on Internal Link. Several things are summarized in the video:
- Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow to below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text  Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
+ Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text  Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
     </item>
     
     <item>
