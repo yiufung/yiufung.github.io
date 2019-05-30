@@ -1,0 +1,279 @@
+#+STARTUP: logdone
+#+TODO: TODO IN-PROGRESS FEEDBACK DONE
+#+TYP_TODO: Fred Sara Lucy | DONE
+
+* Document Structure
+** Songs
+*** Tomorrow on the Runway
+Old days, don't come to find me
+The sun is just about to climb up over there
+While my heart is sinking I do not want my voice
+To go out into the air
+Did you leave the darkness without me?
+You're always miles ahead
+And you're standing in tomorrow on the runway
+Oh, be the music in my head
+The air around my bed
+Oh, be my rest
+Replace the small disgraces of the times and places
+That I never really left
+Did you leave the darkness without me?
+You're always miles ahead
+And you're standing in tomorrow on the runway
+Oh, I want to fly, fly forward into the light
+Be alive, to come alive
+On the leaf-bright Friday drive
+Sudden horses at the red light
+Turn around, see clearer ways to go now Peace
+*** Green Bus
+Down this street
+I ride a green bus
+Early, deep into town
+If I could speak, if I could be
+As I would like to be now-
+
+And what could I bring you
+Now in the meantime?
+Fruit from the sunlight
+Quartz from the bay?
+And where will I find this
+Perfect and wondrous?
+I look into shops
+I slip into rain
+
+Leaves on leaves
+I walk through deeply
+Gold, green, gold
+For my friend
+I cannot find a thing
+Beautiful enough for you
+Again
+
+And what could I bring you
+Today in the meantime?
+Fruit from the sunlight
+Quartz from the bay?
+And where will I find this
+Perfect and wondrous?
+
+*** Task
+- [X] ~TAB~ to cycle tree, but long intro text blocks subheadings.
+- [X] Try ~C-c C-k~
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor
+tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis
+eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum.
+Nam vestibulum accumsan nisl.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor
+tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis
+eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum.
+Nam vestibulum accumsan nisl.
+
+**** Step 1
+Nam vestibulum accumsan nisl.  Nullam rutrum.
+**** Step 2
+Easier navigation
+**** Step 3
+*** COMP101
+**** TODO Lecture 1
+If there's only 1 empty line to the next subtree, no gap in collapsed view
+
+**** TODO Lecture 2
+If >= 2, gap is shown.
+
+
+**** TODO Lecture 3
+
+
+**** TODO Lecture 4
+
+**** TODO Lecture 5
+
+
+**** TODO Lecture 6
+SCHEDULED: <2019-05-25 Sat>
+
+
+**** TODO Lecture 7
+
+
+*** Test
+**** Book
+***** Intro
+***** Chapter1
+****** More
+***** Chapter2
+****** Stuff
+
+
++ item
+   - item
+      * item
+         +
+
+*** COMP101
+**** TODO Lecture
+
+* Tables
+** Region operations on cells
+
+| Name | Phone | Age |
+|------+-------+-----|
+| John |   316 |  22 |
+| Mary |   112 |  23 |
+
+| Some | Test | John | 316 |
+|------+------+------+-----|
+| John |  316 | Mary | 112 |
+| Mary |  112 |      |     |
+|      |      | John | 316 |
+|      |      | Mary | 112 |
+
+** Create table from region
+
+Example copied from: https://www.w3schools.com/html/html_tables.asp
+
+Success:
+|------------------------------+------------------+---------|
+| Company                      | Contact          | Country |
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Centro comercial Moctezuma   | Francisco Chang  | Mexico  |
+| Ernst Handel                 | Roland Mendel    | Austria |
+| Island Trading               | Helen Bennett    | UK      |
+| Laughing Bacchus Winecellars | Yoshi Tannamuri  | Canada  |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+
+Fail:
+|-----------+-------------+-------------+-----------+-----------+--------|
+| Company   | Contact     | Country     |           |           |        |
+| Alfreds   | Futterkiste | Maria       | Anders    | Germany   |        |
+| Centro    | comercial   | Moctezuma   | Francisco | Chang     | Mexico |
+| Ernst     | Handel      | Roland      | Mendel    | Austria   |        |
+| Island    | Trading     | Helen       | Bennett   | UK        |        |
+| Laughing  | Bacchus     | Winecellars | Yoshi     | Tannamuri | Canada |
+| Magazzini | Alimentari  | Riuniti     | Giovanni  | Rovelli   | Italy  |
+
+** Special Marking Characters for Tables
+
+|---+---------+--------+--------+--------+-------+------|
+|   | Student | Prob 1 | Prob 2 | Prob 3 | Total | Note |
+|---+---------+--------+--------+--------+-------+------|
+| ! |         |     P1 |     P2 |     P3 |   Tot |      |
+| # | Maximum |     10 |     15 |     25 |    50 | 16.7 |
+| ^ |         |     m1 |     m2 |     m3 |    mt |      |
+|---+---------+--------+--------+--------+-------+------|
+| # | Peter   |     10 |      8 |     23 |    41 | 13.7 |
+| # | Sam     |      3 |      2 |     15 |    20 |  6.7 |
+|---+---------+--------+--------+--------+-------+------|
+|   | Average |        |        |        |  30.5 |      |
+| ^ |         |        |        |        |    at |      |
+| $ | max=30  |        |        |        |       |      |
+|---+---------+--------+--------+--------+-------+------|
+#+TBLFM: $6=vsum($P1..$P3)::$7=10*$Tot/$max;%.1f::$at=vmean(@-II..@-I);%.1f
+
+|---+-------------+---+-----+--------------------------------------------------|
+|   | Func        | n | x   | Result                                           |
+|---+-------------+---+-----+--------------------------------------------------|
+| # | exp(x)      | 1 | x   | 1 + x                                            |
+| # | exp(x)      | 2 | x   | 1 + x + x^2 / 2                                  |
+| # | exp(x)      | 5 | x   | 1 + x + x^2 / 2 + x^3 / 6 + x^4 / 24 + x^5 / 120 |
+| # | x^2+sqrt(x) | 2 | x=4 | 18 + 8.25 x - 33. + 0.984 (x - 4)^2              |
+| # | x^2+sqrt(x) | 2 | x=1 | 2 + 2.5 x - 2.5 + 0.875 (x - 1)^2                |
+| * | tan(x)      | 3 | x   | 0.0175 x + 1.77e-6 x^3                           |
+|---+-------------+---+-----+--------------------------------------------------|
+#+TBLFM: $5=taylor($2,$4,$3);n3
+
+#+PLOT: title:"Citas" ind:1 deps:(3) type:2d with:histograms set:"yrange [0:]"
+| Sede      | Max cites | H-index |
+|-----------+-----------+---------|
+| Chile     |    257.72 |   21.39 |
+| Leeds     |    165.77 |   19.68 |
+| Sao Paolo |     71.00 |   11.50 |
+| Stockholm |    134.19 |   14.33 |
+| Morelia   |    257.56 |   17.67 |
+* Hyperlinks
+** Internal Link Summary
+*** DONE Most important use case: =CUSTOM_ID=
+:PROPERTIES:
+:CUSTOM_ID: main-case
+:END:
+
+Use =#= to match heading with same ~CUSTOM_ID~: [[#main-case]]
+
+*** DONE Text Link
+**** DONE Nemo
+
+Text link priority:
+1. [X] dedicated target
+2. [X] Org element (table, list, etc w/ =#+NAME=)
+3. [X] heading with exact same text
+
+[[Nemo]]
+
+*** DONE Radio Targets
+
+Any occurrence of plain text RadioActivity will become a link upon activation
+(~C-c C-c~).
+
+<<<RadioActivity>>>
+
+#+BEGIN_QUOTE
+Chain reaction and mutation
+Contaminated population
+Stop RadioActivity
+Is in the air for you and me
+
+RadioActivity
+RadioActivity
+#+END_QUOTE
+
+
+** Link Abbreviation
+
+#+begin_src emacs-lisp
+(setq org-link-abbrev-alist
+       '(("bugzilla"  . "http://10.1.2.9/bugzilla/show_bug.cgi?id=")
+         ("url-to-ja" . "http://translate.google.fr/translate?sl=en&tl=ja&u=%h")
+         ("google"    . "http://www.google.com/search?q=")
+         ("gmap"      . "http://maps.google.com/maps?q=%s")
+         ("omap"      . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")
+         ("ads"       . "http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?author=%s&db_key=AST")
+         ("openrice"  . "https://www.openrice.com/en/hongkong/restaurants?what=%h")
+         )
+)
+#+end_src
+
+#+RESULTS:
+: ((bugzilla . http://10.1.2.9/bugzilla/show_bug.cgi?id=) (url-to-ja . http://translate.google.fr/translate?sl=en&tl=ja&u=%h) (google . http://www.google.com/search?q=) (gmap . http://maps.google.com/maps?q=%s) (omap . http://nominatim.openstreetmap.org/search?q=%s&polygon=1) (ads . http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?author=%s&db_key=AST) (openrice . https://www.openrice.com/en/hongkong/restaurants?what=%h))
+
+[[google:emacs]]
+
+[[ads:Dominik,C]]
+
+[[openrice:Cantonese Food]]
+* Todo Items
+** Sequence vs. Type
+*** Sequence
+~#+TODO~ implies ~#+SEQ_TODO~.
+*** Type
+Use ~C-u C-c C-t~ to prompt completion for keywords.
+** Used for Project Management
+*** My Own Task
+*** DONE Task assigned to colleague
+CLOSED: [2019-05-26 Sun 23:52] DEADLINE: <2019-05-29 Wed>
+*** DONE Yet another Task assigned to colleague
+CLOSED: [2019-05-26 Sun 23:52] DEADLINE: <2019-05-31 Fri>
+** Log Wait
+** Hierarchical Statistics [7/7]
+*** DONE Direct Child 1
+**** DONE Indirect Child
+**** DONE More Indirect Children
+**** DONE More Indirect Children
+**** DONE More Indirect Children
+**** DONE More Indirect Children
+*** DONE Direct Child 2

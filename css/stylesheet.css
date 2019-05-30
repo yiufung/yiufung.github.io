@@ -83,6 +83,27 @@ code {
     overflow-x: auto;
 }
 
+blockquote {
+    font-family: 'Bookerly';
+    font-style: italic;
+    text-align: left;
+    padding: 0.3rem 1rem 0.3rem;
+    width: 80%;  /* create space for the quotes */
+    margin: 1rem auto 1rem;
+    /* background-color: grey; */
+    background: #E8E8E8;
+}
+
+blockquote:before{
+    margin-right: 13px;
+    right: 100%;
+}
+
+blockquote:after{
+    margin-left: 13px;
+    left: 100%;
+}
+
 pre {
     overflow-x: auto;
     padding-left: 5px;

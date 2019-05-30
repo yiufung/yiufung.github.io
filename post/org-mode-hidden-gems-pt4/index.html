@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>About</title>
+        <title>Org-mode Hidden Gems - 04 TODO Items</title>
         
 <script type="application/javascript">
 var doNotTrack = false;
@@ -56,15 +56,91 @@ if (!doNotTrack) {
 
 
 <div class="blog-post">
-  <h1>About</h1>
+  <h1>Org-mode Hidden Gems - 04 TODO Items</h1>
   <div class="blog-post-subheader">
     <time>30 May 2019</time>
   </div>
   <div class="blog-post-content">
-    <p>My name is Cheong Yiufung. I&rsquo;m a data scientist based in Hong
-Kong. Here I post some of my thoughts.</p>
+    
 
-<p>You may reach me via <code>mail at yiufung.net</code>.</p>
+<h2 id="use-todo-keywords-as-types">Use TODO keywords as types</h2>
+
+<p>Turns out there are 2 <em>interpretations</em> of TODO keywords: <strong>sequence</strong> and <strong>type</strong>. The
+more commonly used one, <em>sequence</em>, cycles through keywords one by one with
+<code>org-todo (C-c C-t)</code> (except when fast access is assigned in the form of <code>TODO(t)</code>).
+The <em>type</em> interpretation, as the name suggests, regards each keyword as
+independent type. When <code>org-todo</code>, keyword will jump directly to <code>DONE</code> state.
+That&rsquo;s the only difference.</p>
+
+<p>Not much of interest at first sight, but at second thought it is very useful for
+tracking progress in a small team setting. Say I work with colleagues in the
+same project and we&rsquo;re in charge of different parts. I can use <em>type</em> sequence to
+indicate division of labor and setup expected deadlines/schedules as usual,
+without needing to know their progress details. It&rsquo;s a task assignment system,
+only at a much more lightweight fashion. (Yes I&rsquo;m looking up to you Jira
+Kanban.)</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/org-todo-type.mp4" type="video/mp4" />
+  <source src="/ox-hugo/org-todo-type.webm" type="video/webm" />
+</video>
+
+
+<h2 id="hierarchical-todo-statistics">Hierarchical todo statistics</h2>
+
+<p><code>org-hierarchical-todo-statistics</code> controls whether TODO statistics should cover
+only direct children. This can be set in per-subtree basis.</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/org-hierarchical-todo-statistics.mp4" type="video/mp4" />
+  <source src="/ox-hugo/org-hierarchical-todo-statistics.webm" type="video/webm" />
+</video>
+
+
+<h2 id="org-habit">Org habit</h2>
+
+<p>Org-habit tracks consistency of TODO item finish states. It produces a nice
+graph in Org-agenda that I can at one glance know whether I&rsquo;m on track.</p>
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+  <div></div>
+
+<figure>
+    <img src="/ox-hugo/org-habit.png" width="50%"/> 
+</figure>
+
+
+<p></div></p>
+
+<p><code>!</code> means today and <code>*</code> means a task has been done on that day. The color
+interpretation is intuitive: Green means on track, yellow warning sign of
+overdue, red overdue, and blue &ldquo;still early, don&rsquo;t feel bad taking a break&rdquo;.</p>
+
+<p>It&rsquo;s a feature I&rsquo;ve been using for a while now and has benefited me most. Setup
+is straight-forward (set property <code>STYLE</code> to <code>habit</code> and specify repeat frequency),
+see <a href="https://orgmode.org/manual/Tracking-your-habits.html">Org habit manual</a> for details.</p>
+
+<blockquote>
+<p>The reality of things consists in their persistent forcing themselves upon our
+recognition. If a thing has no such persistence, it is a mere dream. Reality,
+then, is persistence, is regularity. (C. S. Peirce)</p>
+</blockquote>
+
+<p>That concludes TODO items. On a side note, if you&rsquo;re interested in my Org or
+general settings, it&rsquo;s now published at <a href="https://github.com/yiufung/dot-emacs">yiufung/dot-emacs</a>.</p>
+
+<hr />
+
+<p>Org-mode Hidden Gems series:</p>
+
+<ul>
+<li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt1/">01 Document Structure</a></li>
+<li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt2/">02 Tables</a></li>
+<li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt3/">03 Hyperlinks</a></li>
+<li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt4/">04 TODO Items</a></li>
+</ul>
 
   </div>
   <div id="disqus_thread"></div>

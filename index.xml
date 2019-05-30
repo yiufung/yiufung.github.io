@@ -6,15 +6,24 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Thu, 23 May 2019 22:43:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 18:29:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Org-mode Hidden Gems - 04 TODO Items</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-pt4/</link>
+      <pubDate>Thu, 30 May 2019 18:29:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-pt4/</guid>
+      <description>Use TODO keywords as types Turns out there are 2 interpretations of TODO keywords: sequence and type. The more commonly used one, sequence, cycles through keywords one by one with org-todo (C-c C-t) (except when fast access is assigned in the form of TODO(t)). The type interpretation, as the name suggests, regards each keyword as independent type. When org-todo, keyword will jump directly to DONE state. That&amp;rsquo;s the only difference.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Thu, 23 May 2019 22:43:22 +0800</pubDate>
+      <pubDate>Thu, 30 May 2019 18:25:10 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
       <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
