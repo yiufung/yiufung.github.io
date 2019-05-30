@@ -77,32 +77,50 @@ h6  {
 
 code {
     font-family: 'Inconsolata', monospace;
-    /* background-color: white; */
     font-size: 1rem;
     white-space: pre;
     overflow-x: auto;
 }
 
 blockquote {
+    position: relative;
+    border-radius: 0.8em;
     font-family: 'Bookerly';
     font-style: italic;
-    text-align: left;
-    padding: 0.3rem 1rem 0.3rem;
-    width: 80%;  /* create space for the quotes */
-    margin: 1rem auto 1rem;
-    /* background-color: grey; */
+    text-align: normal;
+    padding: 2rem 2rem 0.5rem;
+    width: 90%;  /* create space for the quotes */
+    margin: 0.5rem auto 0.5rem;
     background: #E8E8E8;
 }
 
+/* blockquote p:first-of-type:before { */
+/*         content: '\201c'; */
+/*         position: absolute; */
+/*         left: -.5em; */
+/* } */
+
+/* blockquote p:last-of-type:after { */
+/*         content: '\201d'; */
+/*         position: absolute; */
+/* } */
+
+
 blockquote:before{
-    margin-right: 13px;
-    right: 100%;
+    position: absolute;
+    content: open-quote;
+    font-size: 3rem;
+    margin-left: -1.5rem;
+    margin-top: -2.0rem;
 }
 
-blockquote:after{
-    margin-left: 13px;
-    left: 100%;
-}
+/* blockquote:after{ */
+/*     content: '\201d'; */
+/*     font-style: bold; */
+/*     font-size: 20px; */
+/*     text-align: right; */
+/*     float:right; */
+/* } */
 
 pre {
     overflow-x: auto;
