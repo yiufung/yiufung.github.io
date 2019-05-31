@@ -86,7 +86,6 @@ blockquote {
     position: relative;
     border-radius: 0.8em;
     font-family: 'EB Garamond';
-    font-style: italic;
     text-align: normal;
     padding: 2rem 2rem 0.5rem;
     width: 90%;  /* create space for the quotes */
@@ -94,33 +93,13 @@ blockquote {
     background: #E8E8E8;
 }
 
-/* blockquote p:first-of-type:before { */
-/*         content: '\201c'; */
-/*         position: absolute; */
-/*         left: -.5em; */
-/* } */
-
-/* blockquote p:last-of-type:after { */
-/*         content: '\201d'; */
-/*         position: absolute; */
-/* } */
-
-
 blockquote:before{
     position: absolute;
-    content: '\201c';
+    content: open-quote;
     font-size: 3rem;
     margin-left: -1.5rem;
     margin-top: -2.0rem;
 }
-
-/* blockquote:after{ */
-/*     content: '\201d'; */
-/*     font-style: bold; */
-/*     font-size: 20px; */
-/*     text-align: right; */
-/*     float:right; */
-/* } */
 
 pre {
     overflow-x: auto;
