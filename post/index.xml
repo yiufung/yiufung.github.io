@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Thu, 30 May 2019 18:29:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jun 2019 19:49:35 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Org-mode Hidden Gems - 05 Tags</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-pt5/</link>
+      <pubDate>Sat, 01 Jun 2019 19:49:35 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-pt5/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Org-mode Hidden Gems - 04 TODO Items</title>
