@@ -118,6 +118,41 @@ more <code>C-c ?</code> to locate reference)</li>
 <p>I was confused by table references and haven&rsquo;t used much of calculation features
 before, but this section is quite enlightening. I think I&rsquo;ll use it more later.</p>
 
+<h2 id="use-org-table-in-latex-html">Use Org Table in LaTeX/HTML</h2>
+
+<p>User /u/emacsomancer <a href="https://www.reddit.com/r/emacs/comments/bnbdye/orgmode%5Fhidden%5Fgems%5F2%5Ftables/en4mhzd?utm%5Fsource=share&amp;utm%5Fmedium=web2x">mentions</a> this killer feature of using Org table in other
+major modes, notably, in LaTeX and HTML.</p>
+
+<p>Command <code>orgtbl-insert-radio-table</code> prompts for a table name, and inserts <em>source</em>
+and <em>target</em> location. Edit Org table in source location, which is in the comment
+section of major mode, as usual. Upon hitting ubiquitous <code>C-c C-c</code>, Org will
+<em>translate</em> the table from source location, and put it into target location where
+it gets rendered.</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/orgtbl-insert-radio-table-latex.mp4" type="video/mp4" />
+  <source src="/ox-hugo/orgtbl-insert-radio-table-latex.webm" type="video/webm" />
+</video>
+
+
+<p>HTML works as well.</p>
+
+<video width="100%" controls loop muted playsinline preload="metadata">
+  <source src="/ox-hugo/orgtbl-insert-radio-table-html.mp4" type="video/mp4" />
+  <source src="/ox-hugo/orgtbl-insert-radio-table-html.webm" type="video/webm" />
+</video>
+
+
+<p>It does not only alleviate the pain of editing table by hand but also preserve
+all essences of Org table: adding/removing rows/columns, reordering, adding
+boundaries, formulas, Calc integration, etc. I don&rsquo;t know any other LaTeX
+editing environment provides similar table editing experience, and I&rsquo;d list it
+as a strong reason to try Emacs for anyone using LaTeX professionally.</p>
+
+<p>This nifty, wizard piece of functionality secludes itself in <a href="https://orgmode.org/manual/Tables-in-Arbitrary-Syntax.html#Tables-in-Arbitrary-Syntax">Appendix.5 Tables
+in Arbitrary Syntax</a>. If you&rsquo;re looking to use Org table in other plain text
+modes without translation, <a href="https://orgmode.org/manual/Orgtbl-mode.html">Orgtbl-mode</a> is available.</p>
+
 <p>That concludes Tables chapter.</p>
 
 <h2 id="behind-the-scene-bulk-video-conversion-with-dired">Behind the Scene: Bulk Video Conversion with Dired</h2>
