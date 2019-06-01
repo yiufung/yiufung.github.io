@@ -97,6 +97,32 @@ only direct children. This can be set on a per-subtree basis.</p>
 </video>
 
 
+<h2 id="change-log-note-templates">Change log note templates</h2>
+
+<p>If any of <code>org-log-(done/refile/repeat/reschedule/redeadline)</code> is set to <code>time</code> or
+<code>note</code>, then a status change would trigger insertion of a note in the <code>:LOGBOOK:</code>
+drawer. It&rsquo;s possible to define template for notes via <code>org-log-note-headings</code>.
+Here&rsquo;s my setting, which adds new timestamp (<code>%s</code>) to <code>reschedule</code> and <code>redeadline</code>:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-log-note-headings</span> &#39;((<span style="color:#00688b">done</span>        . <span style="color:#cd5555">&#34;CLOSING NOTE %t&#34;</span>)
+                              (<span style="color:#00688b">state</span>       . <span style="color:#cd5555">&#34;State %-12s from %-12S %t&#34;</span>)
+                              (<span style="color:#00688b">note</span>        . <span style="color:#cd5555">&#34;Note taken on %t&#34;</span>)
+                              (<span style="color:#00688b">reschedule</span>  . <span style="color:#cd5555">&#34;Schedule changed on %t: %S -&gt; %s&#34;</span>)
+                              (<span style="color:#00688b">delschedule</span> . <span style="color:#cd5555">&#34;Not scheduled, was %S on %t&#34;</span>)
+                              (<span style="color:#00688b">redeadline</span>  . <span style="color:#cd5555">&#34;Deadline changed on %t: %S -&gt; %s&#34;</span>)
+                              (<span style="color:#00688b">deldeadline</span> . <span style="color:#cd5555">&#34;Removed deadline, was %S on %t&#34;</span>)
+                              (<span style="color:#00688b">refile</span>      . <span style="color:#cd5555">&#34;Refiled on %t&#34;</span>)
+                              (<span style="color:#00688b">clock-out</span>   . <span style="color:#cd5555">&#34;&#34;</span>)))</code></pre></div>
+<figure>
+    <img src="/ox-hugo/org-log-note-headings.png"/> 
+</figure>
+
+
+<p>These days I set many of <code>org-log-*</code> to <code>note</code> to keep verbose log of task progress.
+Whenever a task is delayed/rescheduled/redeadlined, the reasons are kept as
+notes in logbook drawer. In this way, a full history is retained while not
+intervening normal edits. Verbose timestamps also helps in keeping a daily
+working journal, and when using <a href="https://orgmode.org/manual/Sparse-trees.html">Org Sparse Trees</a> (especially with the <code>c</code> option).</p>
+
 <h2 id="org-habit">Org habit</h2>
 
 <p>Org-habit tracks consistency of TODO item finish states. It produces a nice

@@ -277,3 +277,14 @@ CLOSED: [2019-05-26 Sun 23:52] DEADLINE: <2019-05-31 Fri>
 **** DONE More Indirect Children
 **** DONE More Indirect Children
 *** DONE Direct Child 2
+** Org log note headings
+*** IN-PROGRESS Discussion and Decision on Plan B
+DEADLINE: <2019-06-06 Thu> SCHEDULED: <2019-06-06 Thu>
+:LOGBOOK:
+- Deadline changed on [2019-06-01 Sat 13:22]: "[2019-06-08 Sat]" -> "[2019-06-06 Thu]" \\
+  Jim wants an earlier reply
+- Schedule changed on [2019-06-01 Sat 13:22]: "[2019-06-03 Mon 12:00]" -> "[2019-06-04 Tue]" \\
+  Jack on annual leave
+- Schedule changed on [2019-06-01 Sat 13:21]: "[2019-06-03 Mon 11:00]" -> "[2019-06-03 Mon 12:00]" \\
+  Room is occupied
+:END:
