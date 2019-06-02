@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Tue, 14 May 2019 00:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 18:29:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Org-mode Hidden Gems - 04 TODO Items</title>
+      <link>http://yiufung.net/post/org-mode-hidden-gems-pt4/</link>
+      <pubDate>Thu, 30 May 2019 18:29:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/org-mode-hidden-gems-pt4/</guid>
+      <description>Use TODO keywords as types Turns out there are 2 interpretations of TODO keywords: sequence and type. The more commonly used one, sequence, cycles through keywords one by one with org-todo (C-c C-t) (except when fast access is assigned in the form of TODO(t)). The type interpretation, as the name suggests, regards each keyword as independent type. When org-todo, keyword will jump directly to DONE state. That&amp;rsquo;s the only difference.</description>
+    </item>
     
     <item>
       <title>Org-mode Hidden Gems - 03 Hyperlinks</title>
