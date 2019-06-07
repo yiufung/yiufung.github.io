@@ -203,6 +203,11 @@ settings.</p>
 
 <hr />
 
+<p>Update 2019-06-07: Inspired by <a href="https://www.reddit.com/r/emacs/comments/bw9yo7/did%5Fyou%5Fknow%5Fthat%5Fthe%5Feshell%5Fis%5Fawesome/">reddit thread on eshell awesomeness</a>, we can use
+<code>file-name-sans-extension</code> to get the base name. Neat!</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8b008b;font-weight:bold">for</span> f in *.webm {ffmpeg -i <span style="color:#00688b">$f</span> -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#8b008b;font-weight:bold">$(</span>file-name-sans-extension f<span style="color:#8b008b;font-weight:bold">)</span>.mp4}</code></pre></div>
+<hr />
+
 <p>Org-mode Hidden Gems series:</p>
 
 <ul>
