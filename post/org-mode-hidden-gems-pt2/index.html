@@ -197,15 +197,26 @@ this could be a one-click bulk conversion tool for videos. Emacs does have some
 plain text magics!</p>
 
 <p>PS: If you know how to refer to filename <em>without</em> the suffix, please let me know,
-this would simplify it even further. It should be a common use case (same
-filename with different suffix in input/output), but I couldn&rsquo;t find related
-settings.</p>
+this would simplify it even further (<strong>Update 2019-06-09: This is solved. See
+below for details</strong>) . It should be a common use case (same filename with
+different suffix in input/output), but I couldn&rsquo;t find related settings.</p>
 
 <hr />
 
 <p>Update 2019-06-07: Inspired by <a href="https://www.reddit.com/r/emacs/comments/bw9yo7/did%5Fyou%5Fknow%5Fthat%5Fthe%5Feshell%5Fis%5Fawesome/">reddit thread on eshell awesomeness</a>, we can use
-<code>file-name-sans-extension</code> to get the base name. Neat!</p>
+<code>file-name-sans-extension</code> to get the base name. It requires to be run in eshell
+though.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8b008b;font-weight:bold">for</span> f in *.webm {ffmpeg -i <span style="color:#00688b">$f</span> -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#8b008b;font-weight:bold">$(</span>file-name-sans-extension f<span style="color:#8b008b;font-weight:bold">)</span>.mp4}</code></pre></div>
+<hr />
+
+<p>Update 2019-06-09: /u/osugisakae has <a href="https://www.reddit.com/r/orgmode/comments/bnbtfg/orgmode%5Fhidden%5Fgems%5F2%5Ftables/eqg456v?utm%5Fsource=share&amp;utm%5Fmedium=web2x">kindly pointed out the one liner using
+<code>basename</code> command</a>:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i ? -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#cd5555">`</span>basename -s .webm <span style="color:#cd5555">`</span>?<span style="color:#cd5555">``</span>.mp4</code></pre></div>
+<p>The outer backtick runs <code>basename</code> command against inner backtick <code>`?`</code>, which
+represents the actual file name, then returns the base name after stripping
+<code>.webm</code> suffix. All we do then is simply add <code>.mp4</code> afterwards. This is a very
+powerful trick that applies universally. Thanks /u/osugisakae!</p>
+
 <hr />
 
 <p>Org-mode Hidden Gems series:</p>
