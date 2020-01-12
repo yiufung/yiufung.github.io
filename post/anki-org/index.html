@@ -161,8 +161,13 @@ of article)</p>
 <li>By default <code>anki-editor-cloze-{dwim,region}</code> always asks for hints and requires
 card number input. I don't use hints much, and usually want card number to
 increase, so two helper functions
-<code>anki-editor-cloze-region-{auto-incr,dont-incr}</code> are written as well as a card
-number reset function.</li>
+<code>anki-editor-cloze-region-{auto-incr,dont-incr}</code> are written to skip these
+behaviors. (Note: Such kind of customizations are ubiquitous in Emacs
+community, where users don't have to wait for upstream to implement a desired
+new feature. This is quite different from Anki community where version updates
+frequently break existing add-ons, leaving end-users hands tied, or new
+features being delayed due to technical difficulty in understanding the code
+base.)</li>
 <li>By default <code>anki-editor-push-notes</code> will push the whole file. This is slow when
 the file contain old entries that didn't really need to change. In my
 workflow, I keep all pending notes under <code>Dispatch Shelf</code> subtree, and push that
