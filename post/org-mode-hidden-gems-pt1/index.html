@@ -61,85 +61,66 @@ if (!doNotTrack) {
     <time>10 May 2019</time>
   </div>
   <div class="blog-post-content">
-    
-
-<p>Recently I started to read Org mode manual, and it surprises me there are so
-many useful options/commands/functionalities I wasn&rsquo;t aware of even after using
-it daily for the past year, so I&rsquo;d like to share some of the findings here.</p>
-
+    <p>Recently I started to read Org mode manual, and it surprises me there are so
+many useful options/commands/functionalities I wasn't aware of even after using
+it daily for the past year, so I'd like to share some of the findings here.</p>
 <p>Each section is accompanied with a short demo video. Settings are based on my
-preference, but as the old saying goes, &ldquo;<a href="https://www.reddit.com/r/emacs/comments/bmqel1/how%5Fto%5Fdecrease%5Fthe%5Fheight%5Fof%5Fall%5Fblank%5Flines/emz1kej?utm%5Fsource=share&amp;utm%5Fmedium=web2x">a man&rsquo;s Emacs is his own castle</a>&rdquo;, so do
+preference, but as the old saying goes, &ldquo;<a href="https://www.reddit.com/r/emacs/comments/bmqel1/how%5Fto%5Fdecrease%5Fthe%5Fheight%5Fof%5Fall%5Fblank%5Flines/emz1kej?utm%5Fsource=share&amp;utm%5Fmedium=web2x">a man's Emacs is his own castle</a>&quot;, so do
 customize it for your own good. When in doubt, <code>C-h v</code> and <code>C-h f</code> are always your
 friends. Emacs 26.2 with Org v9.2.3 are used here.</p>
-
 <h2 id="avoid-inadvertent-text-edit-in-invisible-area">Avoid inadvertent text edit in invisible area</h2>
-
-<p>When text is inserted near invisible area (<code>...</code>), I&rsquo;m never sure what exactly is
+<p>When text is inserted near invisible area (<code>...</code>), I'm never sure what exactly is
 changed. Usually I would expand to check, only to end up losing my focus during
 panic <code>TAB</code> ing.</p>
-
 <p>Set <code>org-catch-invisible-edits</code> to <code>error</code> to prevent editing invisible area, and
 show an error message in echo area instead. I prefer <code>show-and-error</code>, which
 additionally expand text and move focus to the expected point.</p>
-
 <video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-catch-invisible-edits.mp4" type="video/mp4" />
   <source src="/ox-hugo/org-catch-invisible-edits.webm" type="video/webm" />
 </video>
 
-
 <h2 id="show-headings-only">Show headings only</h2>
-
 <p>Usually I would have some texts under a tree right before its subtrees. This
 could be visually disturbing when I <code>TAB</code> through trying to glance at tree
 structure. All I want is the headings. In this case,
 <code>org-kill-note-or-show-branches</code> (bound to <code>C-c C-k</code>) comes in handy.</p>
-
 <video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/outline-show-branches.mp4" type="video/mp4" />
   <source src="/ox-hugo/outline-show-branches.webm" type="video/webm" />
 </video>
 
-
 <h2 id="clone-trees-with-time-shifts">Clone trees with time shifts</h2>
-
 <p>Bound to <code>C-c C-x c</code>, <code>org-clone-subtree-with-time-shift</code> create multiple subtrees
 with timestamps shifted. Useful for creating skeleton for repeated tasks.</p>
-
 <video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-clone-subtree-with-time-shift.mp4" type="video/mp4" />
   <source src="/ox-hugo/org-clone-subtree-with-time-shift.webm" type="video/webm" />
 </video>
 
-
 <h2 id="in-collapsed-view-hide-empty-lines-between-subtrees">In collapsed view, hide empty lines between subtrees</h2>
-
 <p>Set <code>org-cycle-separator-lines</code> to <code>0</code>. Gives a more compact and consistent view,
 especially in a large Org file with many headings.</p>
-
 <video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-cycle-separator-lines.mp4" type="video/mp4" />
   <source src="/ox-hugo/org-cycle-separator-lines.webm" type="video/webm" />
 </video>
 
-
 <h2 id="demote-sequence-for-list-bullets">Demote sequence for list bullets</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-demote-modify-bullet</span> &#39;((<span style="color:#cd5555">&#34;+&#34;</span> . <span style="color:#cd5555">&#34;-&#34;</span>) (<span style="color:#cd5555">&#34;-&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>) (<span style="color:#cd5555">&#34;*&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>)))</code></pre></div>
-<video width="100%" controls loop muted playsinline preload="metadata">
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-demote-modify-bullet</span> &#39;((<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">-</span><span style="color:#cd5555">&#34;</span>) (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">-</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span>) (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">*</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span>)))
+</code></pre></div><video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-list-demote-modify-bullet.mp4" type="video/mp4" />
   <source src="/ox-hugo/org-list-demote-modify-bullet.webm" type="video/webm" />
 </video>
 
-
 <h2 id="miscellaneous">Miscellaneous</h2>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;; Increase sub-item indentation</span>
-(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-indent-offset</span> <span style="color:#b452cd">1</span>)</code></pre></div>
-<p>And I only learn the existence of <a href="https://orgmode.org/manual/Plain-lists.html#Plain-lists"><code>Description list</code></a> today. Writing:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#8b008b;font-weight:bold">- Emacs ::</span> An extensible, customizable, free/libre text editor
+(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-indent-offset</span> <span style="color:#b452cd">1</span>)
+</code></pre></div><p>And I only learn the existence of <a href="https://orgmode.org/manual/Plain-lists.html#Plain-lists"><code>Description list</code></a> today. Writing:</p>
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#8b008b;font-weight:bold">- </span><span style="color:#8b008b;font-weight:bold">Emacs ::</span> An extensible, customizable, free/libre text editor
 <span style="color:#8b008b;font-weight:bold">- </span>Org mode :: Keeping notes, maintaining TODO lists, planning projects, and
-  authoring documents with a fast and effective plain-text system</code></pre></div>
-<p>renders:</p>
-
+  authoring documents with a fast and effective plain-text system
+</code></pre></div><p>renders:</p>
 <blockquote>
 <dl>
 <dt>Emacs</dt>
@@ -149,11 +130,8 @@ especially in a large Org file with many headings.</p>
 authoring documents with a fast and effective plain-text system</dd>
 </dl>
 </blockquote>
-
-<hr />
-
+<hr>
 <p>Org-mode Hidden Gems series:</p>
-
 <ul>
 <li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt1/">01 Document Structure</a></li>
 <li><a href="https://yiufung.net/post/org-mode-hidden-gems-pt2/">02 Tables</a></li>

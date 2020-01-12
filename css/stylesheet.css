@@ -3,6 +3,7 @@ body {
     margin: auto;
     max-width: 55em;
     background-color: floralwhite;
+    font-size: 1.1rem;
 }
 
 #page-title {
@@ -20,7 +21,6 @@ body {
 }
 
 .blog-post-content a {
-    color: black;
     text-decoration: underline;
 }
 
@@ -113,4 +113,8 @@ pre {
     text-align: right;
     color: black;
     font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
 }

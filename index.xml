@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>彷彿若有光</title>
@@ -6,18 +6,29 @@
     <description>Recent content on 彷彿若有光</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Mon, 03 Jun 2019 02:38:35 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 18:24:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yiufung.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Power up Anki with Emacs, Org mode, Anki-editor and more</title>
+      <link>http://yiufung.net/post/anki-org/</link>
+      <pubDate>Sun, 12 Jan 2020 18:24:00 +0800</pubDate>
+      
+      <guid>http://yiufung.net/post/anki-org/</guid>
+      <description>It&#39;s been a while since the last post, one reason is that for the past few months I&#39;ve been drawn to Anki, the spaced-repetition flashcard program. If you haven&#39;t checked it out yet, I strongly recommended it. (Why? Read Michael Nielson&#39;s article)
+One question recurred among Anki community is how to generate cards quickly. 3 approaches are common:
+ Use Anki&#39;s &amp;ldquo;Import&amp;rdquo; function to read csv/tsv Write Python scripts with genanki that generate .</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>http://yiufung.net/about/</link>
-      <pubDate>Mon, 03 Jun 2019 02:38:35 +0800</pubDate>
+      <pubDate>Sat, 01 Jun 2019 13:40:45 +0800</pubDate>
       
       <guid>http://yiufung.net/about/</guid>
-      <description>My name is Cheong Yiufung. I&amp;rsquo;m a data scientist based in Hong Kong. Here I post some of my thoughts.
+      <description>My name is Cheong Yiufung. I&#39;m a data scientist based in Hong Kong. Here I post some of my thoughts.
 You may reach me via mail at yiufung.net.</description>
     </item>
     
@@ -27,7 +38,7 @@ You may reach me via mail at yiufung.net.</description>
       <pubDate>Thu, 30 May 2019 18:29:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt4/</guid>
-      <description>Use TODO keywords as types Turns out there are 2 interpretations of TODO keywords: sequence and type. The more commonly used one, sequence, cycles through keywords one by one with org-todo (C-c C-t) (except when fast access is assigned in the form of TODO(t)). The type interpretation, as the name suggests, regards each keyword as independent type. When org-todo, keyword will jump directly to DONE state. That&amp;rsquo;s the only difference.</description>
+      <description>Use TODO keywords as types Turns out there are 2 interpretations of TODO keywords: sequence and type. The more commonly used one, sequence, cycles through keywords one by one with org-todo (C-c C-t) (except when fast access is assigned in the form of TODO(t)). The type interpretation, as the name suggests, regards each keyword as independent type. When org-todo, keyword will jump directly to DONE state. That&#39;s the only difference.</description>
     </item>
     
     <item>
@@ -37,7 +48,7 @@ You may reach me via mail at yiufung.net.</description>
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt3/</guid>
       <description>Internal Link Summary Previously I seldom used anything other than URLs, and this chapter taught me more on Internal Link. Several things are summarized in the video:
- Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text  Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
+ Use # to locate heading with same CUSTOM_ID Plain text link [[textlink]] will follow below priority:  Dedicated target (double angular brackets) Org element (table, list, etc w/ #+NAME) Heading with exact same text   Radio Target (triple angular brackets): automatic links  I find Radio Target most interesting.</description>
     </item>
     
     <item>
@@ -48,7 +59,7 @@ You may reach me via mail at yiufung.net.</description>
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt2/</guid>
       <description>Region operations on cells Excel-like copy-pasting: C-c C-x M-w(copy)/C-w(cut)/C-y(paste).
  Create table from region Bound to C-c |, org-table-create-or-convert-from-region converts semi-formatted texts (esp. those copied from web) into Org table.
-This command rely on detecting delimiter TAB or comma in region. If conversion fails, check any minor modes or settings that may turn TAB character into space in the background. In my case, it&amp;rsquo;s whitespace-cleanup-mode. This can get tricky if enabled along with auto-save-mode, as copied text might be auto-saved and TABs stripped before conversion.</description>
+This command rely on detecting delimiter TAB or comma in region. If conversion fails, check any minor modes or settings that may turn TAB character into space in the background. In my case, it&#39;s whitespace-cleanup-mode. This can get tricky if enabled along with auto-save-mode, as copied text might be auto-saved and TABs stripped before conversion.</description>
     </item>
     
     <item>
@@ -57,8 +68,8 @@ This command rely on detecting delimiter TAB or comma in region. If conversion f
       <pubDate>Fri, 10 May 2019 11:25:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/org-mode-hidden-gems-pt1/</guid>
-      <description>Recently I started to read Org mode manual, and it surprises me there are so many useful options/commands/functionalities I wasn&amp;rsquo;t aware of even after using it daily for the past year, so I&amp;rsquo;d like to share some of the findings here.
-Each section is accompanied with a short demo video. Settings are based on my preference, but as the old saying goes, &amp;ldquo;a man&amp;rsquo;s Emacs is his own castle&amp;rdquo;, so do customize it for your own good.</description>
+      <description>Recently I started to read Org mode manual, and it surprises me there are so many useful options/commands/functionalities I wasn&#39;t aware of even after using it daily for the past year, so I&#39;d like to share some of the findings here.
+Each section is accompanied with a short demo video. Settings are based on my preference, but as the old saying goes, &amp;ldquo;a man&#39;s Emacs is his own castle&amp;quot;, so do customize it for your own good.</description>
     </item>
     
     <item>
@@ -77,8 +88,8 @@ Each section is accompanied with a short demo video. Settings are based on my pr
       <pubDate>Fri, 14 Dec 2018 22:08:00 +0800</pubDate>
       
       <guid>http://yiufung.net/post/emacs-key-binding-conventions-and-why-you-should-try-it/</guid>
-      <description>This post describes my method to learn Emacs native keybindings from an ex-Vimmer&amp;rsquo;s perspective. It&amp;rsquo;s an extension from a Reddit post.
-Evil-mode journey My Emacs journey started with Spacemacs. At that time, I had the misconception that Emacs has lengthy and incomprehensible keybindings, so without a second thought, I chose to go with Vim-bindings, which I used for 6 years and even read a book about. Spacemacs is surely a great project, opening up all the goodies of Emacs to a Vimmer.</description>
+      <description>This post describes my method to learn Emacs native keybindings from an ex-Vimmer&#39;s perspective. It&#39;s an extension from a Reddit post.
+ Evil-mode journey My Emacs journey started with Spacemacs. At that time, I had the misconception that Emacs has lengthy and incomprehensible keybindings, so without a second thought, I chose to go with Vim-bindings, which I used for 6 years and even read a book about. Spacemacs is surely a great project, opening up all the goodies of Emacs to a Vimmer.</description>
     </item>
     
   </channel>

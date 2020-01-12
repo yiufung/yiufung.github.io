@@ -66,7 +66,6 @@ to vanilla Emacs. For config style, I chose Org Babel - which normally involves
 using a short Lisp file (<code>init.el</code>) to tangle and load actual config in Org mode
 (<code>config.org</code>) - for its readability and easy navigation. After a while, however,
 I find it not as handy as expected:</p>
-
 <ol>
 <li>At least 2 files are to be maintained, which adds unnecessary complexity</li>
 <li><code>config.org</code> needs to be re-tangled for every single change, which gets slow as
@@ -76,14 +75,12 @@ tried out new packages</li>
 typo), error prompts will refer to locations in the tangled Lisp file
 (<code>config.el</code>) instead of original Org file</li>
 </ol>
-
-<p>I figured I don&rsquo;t really need full-featured Org-mode (scheduling, deadlines,
+<p>I figured I don't really need full-featured Org-mode (scheduling, deadlines,
 agenda, etc..) for a simple init file. What I really need is easy cycling
 navigation through the file, and, as I mainly use <code>use-package</code>, the ability to
 jump to a <code>use-package</code> definition by name directly. After a little research, I
 found that for the former <a href="https://github.com/alphapapa/outshine"><code>outshine</code></a> comes to rescue, and for the latter,
 <code>use-package</code> provides a useful option <code>use-package-enable-imenu-support</code>.</p>
-
 <p>So here it is, a minimal skeleton for Emacs init.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;;; init.el --- skeleton config  -*- lexical-binding: t; coding:utf-8; fill-column: 119 -*-</span>
 
@@ -105,7 +102,7 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 <span style="color:#228b22">;; Initialize package.el</span>
 (<span style="color:#658b00">require</span> <span style="color:#cd5555">&#39;package</span>)
 (<span style="color:#00688b">add-to-list</span> <span style="color:#cd5555">&#39;package-archives</span>
-             &#39;(<span style="color:#cd5555">&#34;melpa&#34;</span> . <span style="color:#cd5555">&#34;https://melpa.org/packages/&#34;</span>))
+             &#39;(<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">melpa</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">https://melpa.org/packages/</span><span style="color:#cd5555">&#34;</span>))
 (<span style="color:#00688b">package-initialize</span>)
 
 <span style="color:#228b22">;; Bootstrap `use-package&#39;</span>
@@ -130,7 +127,7 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 (<span style="color:#658b00">use-package</span> <span style="color:#00688b">outshine</span>
   <span style="color:#228b22">;; Easier navigation for source files, especially this one.</span>
   <span style="color:#658b00">:bind</span> (<span style="color:#658b00">:map</span> <span style="color:#00688b">outshine-mode-map</span>
-              (<span style="color:#cd5555">&#34;&lt;S-iso-lefttab&gt;&#34;</span> . <span style="color:#00688b">outshine-cycle-buffer</span>)
+              (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;S-iso-lefttab&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">outshine-cycle-buffer</span>)
               )
   <span style="color:#658b00">:hook</span> (<span style="color:#00688b">emacs-lisp-mode</span> . <span style="color:#00688b">outshine-mode</span>)
   )
@@ -140,25 +137,19 @@ found that for the former <a href="https://github.com/alphapapa/outshine"><code>
 <span style="color:#228b22">;; (unless (server-running-p)</span>
 <span style="color:#228b22">;;   (server-start))</span>
 
-<span style="color:#228b22">;;; init.el ends here</span></code></pre></div>
-<p>Main features:</p>
-
+<span style="color:#228b22">;;; init.el ends here</span>
+</code></pre></div><p>Main features:</p>
 <ol>
 <li>Use <code>outshine</code> for cycling visibility in Org mode style</li>
 <li>Use <code>imenu/counsel-imenu</code> to locate individual package configuration</li>
-<li>Apply speed up techniques (modified from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley&rsquo;s config</a>)</li>
+<li>Apply speed up techniques (modified from <a href="https://github.com/jwiegley/dot-emacs/blob/master/init.el#L7">John Wiegley's config</a>)</li>
 </ol>
-
 <p>From there I base all my configurations using <code>use-package</code>, and have a startup
 time of 0.9s with 100+ packages (Main trick: use <code>:defer [N]</code> to defer-load all
 non-necessary packages. The only must-haves for me are <code>counsel</code> and <code>org</code>).</p>
-
-<p><img src="/ox-hugo/emacs-init-hierarchy.png" alt="" />   <img src="/ox-hugo/emacs-init-counsel-imenu.png" alt="" /></p>
-
-<p>Hope that&rsquo;s useful for anyone thinking to rewrite their configs.</p>
-
-<hr />
-
+<p><img src="/ox-hugo/emacs-init-hierarchy.png" alt="">   <img src="/ox-hugo/emacs-init-counsel-imenu.png" alt=""></p>
+<p>Hope that's useful for anyone thinking to rewrite their configs.</p>
+<hr>
 <p>Update on 2019-05-30: My init file is published at <a href="https://github.com/yiufung/dot-emacs">yiufung/dot-emacs</a> following
 the same idea.</p>
 

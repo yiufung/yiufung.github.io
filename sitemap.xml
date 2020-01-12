@@ -1,62 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://yiufung.net/about/</loc>
-    <lastmod>2019-06-03T02:38:35+08:00</lastmod>
+    <loc>http://yiufung.net/post/</loc>
+    <lastmod>2020-01-13T00:28:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yiufung.net/post/anki-org/</loc>
+    <lastmod>2020-01-13T00:28:22+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/</loc>
-    <lastmod>2019-06-09T13:19:53+08:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-01-13T00:28:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yiufung.net/about/</loc>
+    <lastmod>2019-06-01T13:40:45+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/org-mode-hidden-gems-pt4/</loc>
-    <lastmod>2019-06-03T02:41:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yiufung.net/post/</loc>
-    <lastmod>2019-06-09T13:19:53+08:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-01-13T00:23:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/org-mode-hidden-gems-pt3/</loc>
-    <lastmod>2019-06-03T02:38:36+08:00</lastmod>
+    <lastmod>2019-06-01T13:40:46+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/org-mode-hidden-gems-pt2/</loc>
-    <lastmod>2019-06-09T13:19:53+08:00</lastmod>
+    <lastmod>2019-06-01T13:40:45+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/org-mode-hidden-gems-pt1/</loc>
-    <lastmod>2019-06-03T02:38:36+08:00</lastmod>
+    <lastmod>2019-06-01T13:40:45+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/pure-emacs-lisp-init-skeleton/</loc>
-    <lastmod>2019-06-03T02:38:37+08:00</lastmod>
+    <lastmod>2019-06-01T13:40:46+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/post/emacs-key-binding-conventions-and-why-you-should-try-it/</loc>
-    <lastmod>2019-06-03T02:38:37+08:00</lastmod>
+    <lastmod>2019-06-01T13:40:46+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://yiufung.net/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://yiufung.net/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
