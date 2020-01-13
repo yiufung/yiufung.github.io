@@ -70,12 +70,12 @@ approaches are common:</p>
 <ol>
 <li>Use Anki's &ldquo;Import&rdquo; function to read csv/tsv</li>
 <li>Write Python scripts with <a href="https://github.com/kerrickstaley/genanki">genanki</a> that generate <code>.apkg</code> for import</li>
-<li>Use 3-party browser plugin that supports <a href="https://ankiweb.net/shared/info/2055492159">AnkiConnect</a> (e.g: <a href="https://foosoft.net/projects/yomichan/">yomichan</a>)</li>
+<li>Use third-party browser plugin that supports <a href="https://ankiweb.net/shared/info/2055492159">AnkiConnect</a> (e.g. <a href="https://foosoft.net/projects/yomichan/">yomichan</a>)</li>
 </ol>
 <p>While these are viable and oftentimes powerful options, for users they usually
 don't come as flexible for customization (change matching of columns &amp; fields,
-ad-hoc editing, formula/highlight/table/etc support). Programming experience is yet
-another entry barrier for many people.</p>
+ad-hoc editing, formula/highlight/table/etc support). Programming experience is
+yet another entry barrier for many people.</p>
 <p>In this post I'll try to demonstrate some workflows of creating cards in Emacs
 based on <a href="https://github.com/louietan/anki-editor">anki-editor</a>, a package that connects Emacs's Org-mode and AnkiConnect.
 Combining <code>anki-editor</code>'s connectivity, Emacs's customizability, and Org-mode's
@@ -93,8 +93,8 @@ pencil and mark down the date, it may become commemorable later :)). If you
 already knew that Org can do outline-structured editing, has tagging system and
 rich export support, you should be able to follow the post fine.</p>
 <p><span class="underline"><strong>Note for setup</strong></span>: Most setup is done in Emacs configuration language, Emacs
-Lisp, under Linux. I will point out where I think is relevant to explain
-the details, and provide download at the end of article. But as always, YMMV in
+Lisp, under Linux. I will point out where I think is relevant to explain the
+details, and provide download at the end of article. But as always, YMMV in
 other platforms. If you are not sure how to configure, comment below, take a
 look at <a href="https://github.com/yiufung/dot-emacs/blob/master/init.el">my init.el</a>, or join the friendly <a href="https://www.reddit.com/r/emacs/">r/emacs</a>, <a href="https://www.reddit.com/r/orgmode/">r/orgmode</a> and raise your hand.</p>
 <h2 id="emacs-org-mode-as-editor-to-anki">Emacs/Org-mode as editor to Anki</h2>
