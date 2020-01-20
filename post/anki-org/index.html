@@ -130,6 +130,7 @@ of article)</p>
               (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f11&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">anki-editor-cloze-region-dont-incr</span>)
               (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f10&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">anki-editor-reset-cloze-number</span>)
               (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f9&gt;</span><span style="color:#cd5555">&#34;</span>  . <span style="color:#00688b">anki-editor-push-tree</span>))
+  <span style="color:#658b00">:hook</span> (<span style="color:#00688b">org-capture-after-finalize</span> . <span style="color:#00688b">anki-editor-reset-cloze-number</span>) <span style="color:#228b22">; Reset cloze-number after each capture.</span>
   <span style="color:#658b00">:config</span>
   (<span style="color:#658b00">setq</span> <span style="color:#00688b">anki-editor-create-decks</span> <span style="color:#00688b">t</span> <span style="color:#228b22">;; Allow anki-editor to create a new deck if it doesn&#39;t exist</span>
         <span style="color:#00688b">anki-editor-org-tags-as-anki-tags</span> <span style="color:#00688b">t</span>)
@@ -168,6 +169,8 @@ new feature. This is quite different from Anki community where version updates
 frequently break existing add-ons, leaving end-users hands tied, or new
 features being delayed due to technical difficulty in understanding the code
 base.)</li>
+<li>A function is added to <code>org-capture-after-finalize-hook</code> to reset cloze number
+to 1 after each capture</li>
 <li>By default <code>anki-editor-push-notes</code> will push the whole file. This is slow when
 the file contain old entries that didn't really need to change. In my
 workflow, I keep all pending notes under <code>Dispatch Shelf</code> subtree, and push that

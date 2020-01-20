@@ -5,6 +5,7 @@
               ("<f11>" . anki-editor-cloze-region-dont-incr)
               ("<f10>" . anki-editor-reset-cloze-number)
               ("<f9>"  . anki-editor-push-tree))
+  :hook (org-capture-after-finalize . anki-editor-reset-cloze-number) ; Reset cloze-number after each capture.
   :config
   (setq anki-editor-create-decks t ;; Allow anki-editor to create a new deck if it doesn't exist
         anki-editor-org-tags-as-anki-tags t)
