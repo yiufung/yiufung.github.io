@@ -193,7 +193,7 @@ had never tried Emacs native key bindings.</p>
 
   <hr>
 
-  <p class="email-comment">
+  <p class="email-comment"  style="text-align: center">
       <a href="mailto:mail@yiufung.net">Comment via email</a> or via Disqus comments below:
   </p>
   <div id="disqus_thread"></div>
@@ -201,16 +201,17 @@ had never tried Emacs native key bindings.</p>
     
     <button onclick="load_disqus()">Load Disqus Comments</button>
     <script>
-      function load_disqus()
-      {
+        function load_disqus()
+        {
           var dsq = document.createElement('script');
           dsq.type = 'text/javascript';
           dsq.async = true;
-          dsq.src = "http://yiufung.disqus.com/embed.js";
+          dsq.src = "//yiufung.disqus.com/embed.js";
+          var disqus_identifier = '2020-01-20-start-using-orgmode';
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
           var ldr = document.getElementById('disqus_loader');
           ldr.parentNode.removeChild(ldr);
-      }
+        }
     </script>
   </div>
 </div>
