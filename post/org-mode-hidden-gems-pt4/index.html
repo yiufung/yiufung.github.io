@@ -67,13 +67,13 @@ more commonly used one, <em>sequence</em>, cycles through keywords one by one wi
 <code>org-todo (C-c C-t)</code> (except when fast access is assigned in the form of <code>TODO(t)</code>).
 The <em>type</em> interpretation, as the name suggests, regards each keyword as
 independent type. When <code>org-todo</code>, keyword will jump directly to <code>DONE</code> state.
-That's the only difference.</p>
+That&rsquo;s the only difference.</p>
 <p>Not much of interest at first sight, but at second thought it is very useful for
 tracking progress in a small team setting. Say I work with colleagues in the
-same project and we're in charge of different parts. I can use <em>type</em> sequence to
+same project and we&rsquo;re in charge of different parts. I can use <em>type</em> sequence to
 indicate division of labor and setup expected deadlines/schedules as usual,
-without needing to know their progress details. It's a task assignment system,
-only in a much more lightweight fashion. (Yes I'm looking up to you Jira
+without needing to know their progress details. It&rsquo;s a task assignment system,
+only in a much more lightweight fashion. (Yes I&rsquo;m looking up to you Jira
 Kanban.)</p>
 <video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-todo-type.mp4" type="video/mp4" />
@@ -91,7 +91,7 @@ only direct children. This can be set on a per-subtree basis.</p>
 <h2 id="change-log-note-templates">Change log note templates</h2>
 <p>If any of <code>org-log-(done/refile/repeat/reschedule/redeadline)</code> is set to <code>note</code>,
 then a status change would trigger insertion of a note in the <code>:LOGBOOK:</code> drawer.
-It's possible to define template for notes via <code>org-log-note-headings</code>. Here's my
+It&rsquo;s possible to define template for notes via <code>org-log-note-headings</code>. Here&rsquo;s my
 setting, which adds new timestamp (<code>%s</code>) to <code>reschedule</code> and <code>redeadline</code>:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-log-note-headings</span> &#39;((<span style="color:#00688b">done</span>        . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">CLOSING NOTE %t</span><span style="color:#cd5555">&#34;</span>)
                               (<span style="color:#00688b">state</span>       . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">State %-12s from %-12S %t</span><span style="color:#cd5555">&#34;</span>)
@@ -117,7 +117,7 @@ intervening normal edits. Verbose timestamps also helps in keeping a daily
 working journal, and when using <a href="https://orgmode.org/manual/Sparse-trees.html">Org Sparse Trees</a> (especially with the <code>c</code> option).</p>
 <h2 id="org-habit">Org habit</h2>
 <p>Org-habit tracks consistency of TODO item finish states. It produces a nice
-graph in Org-agenda that I can at one glance know whether I'm on track.</p>
+graph in Org-agenda that I can at one glance know whether I&rsquo;m on track.</p>
 <style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
 <div class="org-center">
   <div></div>
@@ -128,8 +128,8 @@ graph in Org-agenda that I can at one glance know whether I'm on track.</p>
 </div>
 <p><code>!</code> means today and <code>*</code> means a task has been done on that day. The color
 interpretation is intuitive: Green means on track, yellow warning sign of
-overdue, red overdue, and blue &ldquo;still early, don't feel bad taking a break&rdquo;.</p>
-<p>It's a feature I've been using for a while now and has benefited me most. Setup
+overdue, red overdue, and blue &ldquo;still early, don&rsquo;t feel bad taking a break&rdquo;.</p>
+<p>It&rsquo;s a feature I&rsquo;ve been using for a while now and has benefited me most. Setup
 is straight-forward (set property <code>STYLE</code> to <code>habit</code> and specify repeat frequency),
 see <a href="https://orgmode.org/manual/Tracking-your-habits.html">Org habit manual</a> for details.</p>
 <blockquote>
@@ -138,8 +138,8 @@ recognition. If a thing has no such persistence, it is a mere dream. Reality,
 then, is persistence, is regularity.</p>
 <p>&ndash; C. S. Peirce</p>
 </blockquote>
-<p>That concludes TODO items. On a side note, if you're interested in my Org or
-general settings, it's now published at <a href="https://github.com/yiufung/dot-emacs">yiufung/dot-emacs</a>.</p>
+<p>That concludes TODO items. On a side note, if you&rsquo;re interested in my Org or
+general settings, it&rsquo;s now published at <a href="https://github.com/yiufung/dot-emacs">yiufung/dot-emacs</a>.</p>
 <hr>
 <p>Org-mode Hidden Gems series:</p>
 <ul>

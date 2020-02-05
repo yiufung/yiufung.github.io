@@ -62,7 +62,7 @@ if (!doNotTrack) {
   </div>
   <div class="blog-post-content">
     <p>This post describes my method to learn Emacs native keybindings from an
-ex-Vimmer's perspective. It's an extension from <a href="https://www.reddit.com/r/emacs/comments/a5j3lc/emacs%5Fkey%5Fbinding%5Fconventions%5Fand%5Fwhy%5Fyou%5Fshould/">a Reddit post</a>.</p>
+ex-Vimmer&rsquo;s perspective. It&rsquo;s an extension from <a href="https://www.reddit.com/r/emacs/comments/a5j3lc/emacs%5Fkey%5Fbinding%5Fconventions%5Fand%5Fwhy%5Fyou%5Fshould/">a Reddit post</a>.</p>
 <hr>
 <h2 id="evil-mode-journey">Evil-mode journey</h2>
 <p>My Emacs journey started with Spacemacs. At that time, I had the misconception
@@ -86,7 +86,7 @@ does/can do, which is essential for customization in the long term.</p>
 <li>
 <p>The consideration of how commands should be organized evolves over time, so
 user needs to adapt accordingly. I personally recommend my Spacemacs friends
-to watch <a href="https://www.youtube.com/watch?v=ZFV5EqpZ6%5Fs&amp;list=PLrJ2YN5y27KLhd3yNs2dR8%5FinqtEiEweE">Spacemacs ABC Series</a>, it's gorgeous, but recorded 3 years ago, many
+to watch <a href="https://www.youtube.com/watch?v=ZFV5EqpZ6%5Fs&amp;list=PLrJ2YN5y27KLhd3yNs2dR8%5FinqtEiEweE">Spacemacs ABC Series</a>, it&rsquo;s gorgeous, but recorded 3 years ago, many
 keybindings have changed since.</p>
 </li>
 </ol>
@@ -98,8 +98,8 @@ through the extra mess added on top of writing a config from scratch.</p>
 Emacs native bindings? I feel lucky now that I chose to give Emacs binding a
 try.</p>
 <h2 id="demystifying-emacs-bindings">Demystifying Emacs bindings</h2>
-<p>There are countless jokes and comics on Emacs's seemingly ridiculous
-keybindings. Good laughs indeed, but at the end of day, it's <em>not</em>
+<p>There are countless jokes and comics on Emacs&rsquo;s seemingly ridiculous
+keybindings. Good laughs indeed, but at the end of day, it&rsquo;s <em>not</em>
 incomprehensible. It has well-defined conventions listed at:</p>
 <p><a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Key-Binding-Conventions.html">Emacs Key Bindings Convention</a></p>
 <p>In summary, the general rules are:</p>
@@ -112,7 +112,7 @@ file, directory, etc&hellip;</li>
 <li><code>C-c</code> <code>C-letter</code> reserved for major mode.</li>
 </ul>
 </li>
-<li>Don't rebind <code>C-g</code>, <code>C-h</code> and <code>ESC</code>.</li>
+<li>Don&rsquo;t rebind <code>C-g</code>, <code>C-h</code> and <code>ESC</code>.</li>
 </ol>
 <figure>
     <img src="/ox-hugo/emacs-mindmap.png" width="100%"/> 
@@ -125,7 +125,7 @@ complex: I need to remember to press <code>Control</code> (&ldquo;not <code>Alt<
 pressed, and pressed <code>l</code> again&hellip; but the idea is actually short:</p>
 <ol>
 <li>
-<p>I'm trying to call a major-mode specific command (<code>org-*</code>), so I
+<p>I&rsquo;m trying to call a major-mode specific command (<code>org-*</code>), so I
 should press <code>C-c</code> first.</p>
 </li>
 <li>
@@ -136,7 +136,7 @@ should press <code>C-c</code> first.</p>
 </li>
 </ol>
 <p>Then the only thing I need to remember is actually just: <code>l</code>. A much
-more succinct mindmap, isn't it? Longer bindings are no more
+more succinct mindmap, isn&rsquo;t it? Longer bindings are no more
 daunting. For example, in ESS (mode for statistical languages such as
 R, Stata), <code>ess-load-library</code> is bound to <code>C-c</code> <code>C-e</code> <code>C-l</code>. Seems long, but
 all it says is just 2 keys with mnemonic: <code>l(oad)</code> under <code>e(xtra)</code> in
@@ -151,8 +151,8 @@ these patterns.</p>
 <p>Of course there are exceptions: in the above example, the companion command for
 <code>org-insert-link</code> is <code>org-store-link</code>, which is <a href="https://orgmode.org/manual/Activation.html">suggested to bound to <code>C-c l</code></a>,
 occupying one of my customized binding space. But now at least 1) I know why
-it's not bound by default, and why it suggests this binding; 2) I know I have
-the freedom to bound to other keys. That's where one's customization starts off.</p>
+it&rsquo;s not bound by default, and why it suggests this binding; 2) I know I have
+the freedom to bound to other keys. That&rsquo;s where one&rsquo;s customization starts off.</p>
 <h2 id="dipping-the-water--or-making-the-jump">Dipping the water (or making the jump)</h2>
 <p>The debate over keybinding style is a never-ending one. Coming from a Vim
 background, I do miss the compositionality it provides. In terms of <strong>editing</strong>
@@ -165,7 +165,7 @@ achieve my goal&rdquo;. It emphasizes on being familiar to what a package
 does exactly, which commands it provdes, and what each command do,
 then combine them in a memorable way. <strong>Keybindings are merely
 representation to flows of thoughts.</strong></p>
-<p>I find this philosophy resembles much to UNIX's &ldquo;do one thing and do
+<p>I find this philosophy resembles much to UNIX&rsquo;s &ldquo;do one thing and do
 it well&rdquo;. With that thought, I started to study each package in depth,
 and assign them bindings that fit in my workflow. For example, these
 are the packages I assign to utilize <code>C-c letter</code> space: <code>p</code> for
@@ -180,9 +180,9 @@ take a look at magit status (<code>C-c g s</code>)&quot;.</p>
 acquainting oneself with the layout of a toolbox: Calling a command is
 like knowing where your tool lies in the box, and a clear layout
 improves productivity vastly. Native Emacs bindings is the layout
-designed by the toolbox creators. It's actually comprehensible and
-reasonable. It's mnemonic at many aspects. Its <code>C-c</code> bindings for
-major-mode is just the same idea of leader key. I haven't mentioned
+designed by the toolbox creators. It&rsquo;s actually comprehensible and
+reasonable. It&rsquo;s mnemonic at many aspects. Its <code>C-c</code> bindings for
+major-mode is just the same idea of leader key. I haven&rsquo;t mentioned
 the normal navigation keys, but if you are someone working with
 terminals all day, its consistency with terminal bindings is also a
 huge plus.</p>

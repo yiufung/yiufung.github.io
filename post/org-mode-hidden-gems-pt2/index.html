@@ -73,7 +73,7 @@ if (!doNotTrack) {
 texts (esp. those copied from web) into Org table.</p>
 <p>This command rely on detecting delimiter <code>TAB</code> or comma in region. If conversion
 fails, check any minor modes or settings that may turn <code>TAB</code> character into space
-in the background. In my case, it's <a href="https://github.com/purcell/whitespace-cleanup-mode"><code>whitespace-cleanup-mode</code></a>. This can get
+in the background. In my case, it&rsquo;s <a href="https://github.com/purcell/whitespace-cleanup-mode"><code>whitespace-cleanup-mode</code></a>. This can get
 tricky if enabled along with <code>auto-save-mode</code>, as copied text might be auto-saved
 and <code>TABs</code> stripped before conversion. A workaround is to disable them
 temporarily.</p>
@@ -101,8 +101,8 @@ more <code>C-c ?</code> to locate reference)</li>
   <source src="/ox-hugo/tables-advanced-features-special-marking-characters.webm" type="video/webm" />
 </video>
 
-<p>I was confused by table references and haven't used much of calculation features
-before, but this section is quite enlightening. I think I'll use it more later.</p>
+<p>I was confused by table references and haven&rsquo;t used much of calculation features
+before, but this section is quite enlightening. I think I&rsquo;ll use it more later.</p>
 <h2 id="use-org-table-in-latex-html">Use Org Table in LaTeX/HTML</h2>
 <p>User /u/emacsomancer <a href="https://www.reddit.com/r/emacs/comments/bnbdye/orgmode%5Fhidden%5Fgems%5F2%5Ftables/en4mhzd?utm%5Fsource=share&amp;utm%5Fmedium=web2x">mentions</a> this killer feature of using Org table in other
 major modes, notably, in LaTeX and HTML.</p>
@@ -124,22 +124,22 @@ it gets rendered.</p>
 
 <p>It does not only alleviate the pain of editing table by hand but also preserve
 all essences of Org table: adding/removing rows/columns, reordering, adding
-boundaries, formulas, Calc integration, etc. I don't know any other LaTeX
-editing environment provides similar table editing experience, and I'd list it
+boundaries, formulas, Calc integration, etc. I don&rsquo;t know any other LaTeX
+editing environment provides similar table editing experience, and I&rsquo;d list it
 as a strong reason to try Emacs for anyone using LaTeX professionally.</p>
 <p>This nifty, wizard piece of functionality secludes itself in <a href="https://orgmode.org/manual/Tables-in-Arbitrary-Syntax.html#Tables-in-Arbitrary-Syntax">Appendix.5 Tables
-in Arbitrary Syntax</a>. If you're looking to use Org table in other plain text
+in Arbitrary Syntax</a>. If you&rsquo;re looking to use Org table in other plain text
 modes without translation, <a href="https://orgmode.org/manual/Orgtbl-mode.html">Orgtbl-mode</a> is available.</p>
 <p>That concludes Tables chapter.</p>
 <h2 id="behind-the-scene-bulk-video-conversion-with-dired">Behind the Scene: Bulk Video Conversion with Dired</h2>
 <p>To support pause operation, I migrated all videos from original <code>gif</code> to <code>webm</code>, and
-was later reminded (by /u/Bombastry, thanks) that Safari can't handle <code>webm</code>
+was later reminded (by /u/Bombastry, thanks) that Safari can&rsquo;t handle <code>webm</code>
 properly. I still wish to support all browsers, and found out <code>mp4</code> as a better
-choice. Now I've got a bunch of <code>webm</code> in hand, how do I generate corresponding
+choice. Now I&rsquo;ve got a bunch of <code>webm</code> in hand, how do I generate corresponding
 <code>mp4</code>?</p>
-<p>First I need an <code>ffmpeg</code> command. It's one search away:</p>
+<p>First I need an <code>ffmpeg</code> command. It&rsquo;s one search away:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i input.webm -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> output.mp4
-</code></pre></div><p>Works fine, how do I apply to each individual <code>webm</code> though? I don't want to input
+</code></pre></div><p>Works fine, how do I apply to each individual <code>webm</code> though? I don&rsquo;t want to input
 one by one to terminal by hand. Neither do I feel like writing bash script
 (takes time to remember syntax), nor copy file names from dired and use
 rectangle editing hacks (lots of editing, you will see my attempt at the
@@ -152,7 +152,7 @@ substituted for ‘?’ or ‘`?`’.
 files. Combined with <a href="https://www.gnu.org/software/emacs/manual/html%5Fnode/emacs/Wdired.html"><code>wdired</code></a>, this turns out to be quite a smooth flow:</p>
 <ol>
 <li>Mark files: individually with <code>m</code>, or in one go with <code>dired-mark-extension</code>
-(bound to <code>* .</code>, you'll need <code>dired-x</code>)</li>
+(bound to <code>* .</code>, you&rsquo;ll need <code>dired-x</code>)</li>
 <li>Run command: <code>!</code> (or <code>&amp;</code> to run asynchronously), fill in command, using <code>?</code> and <code>`?`</code>
 to refer to file name</li>
 <li>Fix suffixes: toggle on <code>wdired</code> (<code>C-x C-q</code>) and <code>query-replace</code> (<code>M-%</code>)</li>
@@ -162,20 +162,20 @@ to refer to file name</li>
   <source src="/ox-hugo/bulk-conversion-dired.webm" type="video/webm" />
 </video>
 
-<p>Not Org-mode related, just thought it's a cool pipeline. Recorded as a macro,
+<p>Not Org-mode related, just thought it&rsquo;s a cool pipeline. Recorded as a macro,
 this could be a one-click bulk conversion tool for videos. Emacs does have some
 plain text magics!</p>
 <p>PS: If you know how to refer to filename <em>without</em> the suffix, please let me know,
 this would simplify it even further (<strong>Update 2019-06-09: This is solved. See
 below for details</strong>) . It should be a common use case (same filename with
-different suffix in input/output), but I couldn't find related settings.</p>
+different suffix in input/output), but I couldn&rsquo;t find related settings.</p>
 <hr>
 <p>Update 2019-06-07: Inspired by <a href="https://www.reddit.com/r/emacs/comments/bw9yo7/did%5Fyou%5Fknow%5Fthat%5Fthe%5Feshell%5Fis%5Fawesome/">reddit thread on eshell awesomeness</a>, we can use
 <code>file-name-sans-extension</code> in <code>eshell</code> to get the base name:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#8b008b;font-weight:bold">for</span> f in *.webm {ffmpeg -i <span style="color:#00688b">$f</span> -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#8b008b;font-weight:bold">$(</span>file-name-sans-extension f<span style="color:#8b008b;font-weight:bold">)</span>.mp4}
 </code></pre></div><p>The drawback is that, <code>dired-do-shell-command</code> ultimately uses <code>shell-file-name</code>,
 which only accepts file shells such as <code>zsh</code>, <code>bash</code> but not <code>eshell</code> (correct me if
-I'm wrong). So to use the command, we must start a new <code>eshell</code> session instead
+I&rsquo;m wrong). So to use the command, we must start a new <code>eshell</code> session instead
 and jump around.</p>
 <hr>
 <p>Update 2019-06-09: /u/osugisakae has <a href="https://www.reddit.com/r/orgmode/comments/bnbtfg/orgmode%5Fhidden%5Fgems%5F2%5Ftables/eqg456v?utm%5Fsource=share&amp;utm%5Fmedium=web2x">kindly pointed out the one liner using
