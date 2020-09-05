@@ -65,7 +65,7 @@ if (!doNotTrack) {
 many useful options/commands/functionalities I wasn&rsquo;t aware of even after using
 it daily for the past year, so I&rsquo;d like to share some of the findings here.</p>
 <p>Each section is accompanied with a short demo video. Settings are based on my
-preference, but as the old saying goes, &ldquo;<a href="https://www.reddit.com/r/emacs/comments/bmqel1/how%5Fto%5Fdecrease%5Fthe%5Fheight%5Fof%5Fall%5Fblank%5Flines/emz1kej?utm%5Fsource=share&amp;utm%5Fmedium=web2x">a man&rsquo;s Emacs is his own castle</a>&quot;, so do
+preference, but as the old saying goes, &ldquo;<a href="https://www.reddit.com/r/emacs/comments/bmqel1/how%5Fto%5Fdecrease%5Fthe%5Fheight%5Fof%5Fall%5Fblank%5Flines/emz1kej?utm%5Fsource=share&amp;utm%5Fmedium=web2x">a man&rsquo;s Emacs is his own castle</a>&rdquo;, so do
 customize it for your own good. When in doubt, <code>C-h v</code> and <code>C-h f</code> are always your
 friends. Emacs 26.2 with Org v9.2.3 are used here.</p>
 <h2 id="avoid-inadvertent-text-edit-in-invisible-area">Avoid inadvertent text edit in invisible area</h2>
@@ -107,7 +107,7 @@ especially in a large Org file with many headings.</p>
 </video>
 
 <h2 id="demote-sequence-for-list-bullets">Demote sequence for list bullets</h2>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-demote-modify-bullet</span> &#39;((<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">-</span><span style="color:#cd5555">&#34;</span>) (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">-</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span>) (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">*</span><span style="color:#cd5555">&#34;</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">+</span><span style="color:#cd5555">&#34;</span>)))
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-demote-modify-bullet</span> &#39;((<span style="color:#cd5555">&#34;+&#34;</span> . <span style="color:#cd5555">&#34;-&#34;</span>) (<span style="color:#cd5555">&#34;-&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>) (<span style="color:#cd5555">&#34;*&#34;</span> . <span style="color:#cd5555">&#34;+&#34;</span>)))
 </code></pre></div><video width="100%" controls loop muted playsinline preload="metadata">
   <source src="/ox-hugo/org-list-demote-modify-bullet.mp4" type="video/mp4" />
   <source src="/ox-hugo/org-list-demote-modify-bullet.webm" type="video/webm" />
@@ -117,7 +117,7 @@ especially in a large Org file with many headings.</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;; Increase sub-item indentation</span>
 (<span style="color:#658b00">setq</span> <span style="color:#00688b">org-list-indent-offset</span> <span style="color:#b452cd">1</span>)
 </code></pre></div><p>And I only learn the existence of <a href="https://orgmode.org/manual/Plain-lists.html#Plain-lists"><code>Description list</code></a> today. Writing:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#8b008b;font-weight:bold">- </span><span style="color:#8b008b;font-weight:bold">Emacs ::</span> An extensible, customizable, free/libre text editor
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-org" data-lang="org"><span style="color:#8b008b;font-weight:bold">- Emacs ::</span> An extensible, customizable, free/libre text editor
 <span style="color:#8b008b;font-weight:bold">- </span>Org mode :: Keeping notes, maintaining TODO lists, planning projects, and
   authoring documents with a fast and effective plain-text system
 </code></pre></div><p>renders:</p>

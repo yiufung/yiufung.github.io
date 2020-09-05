@@ -180,7 +180,7 @@ and jump around.</p>
 <hr>
 <p>Update 2019-06-09: /u/osugisakae has <a href="https://www.reddit.com/r/orgmode/comments/bnbtfg/orgmode%5Fhidden%5Fgems%5F2%5Ftables/eqg456v?utm%5Fsource=share&amp;utm%5Fmedium=web2x">kindly pointed out the one liner using
 <code>basename</code> command</a>:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i ? -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#cd5555">`</span>basename -s .webm <span style="color:#cd5555">`</span>?<span style="color:#cd5555">`</span><span style="color:#cd5555">`</span>.mp4
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -i ? -vf <span style="color:#cd5555">&#34;pad=ceil(iw/2)*2:ceil(ih/2)*2&#34;</span> <span style="color:#cd5555">`</span>basename -s .webm <span style="color:#cd5555">`</span>?<span style="color:#cd5555">``</span>.mp4
 </code></pre></div><p>The outer backtick runs <code>basename</code> command against inner backtick <code>`?`</code>, which
 represents the actual file name, then returns the base name after stripping
 <code>.webm</code> suffix. All we do then is simply add <code>.mp4</code> afterwards.</p>

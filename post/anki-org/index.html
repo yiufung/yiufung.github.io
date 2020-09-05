@@ -126,32 +126,32 @@ of article)</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">use-package</span> <span style="color:#00688b">anki-editor</span>
   <span style="color:#658b00">:after</span> <span style="color:#00688b">org</span>
   <span style="color:#658b00">:bind</span> (<span style="color:#658b00">:map</span> <span style="color:#00688b">org-mode-map</span>
-              (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f12&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">anki-editor-cloze-region-auto-incr</span>)
-              (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f11&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">anki-editor-cloze-region-dont-incr</span>)
-              (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f10&gt;</span><span style="color:#cd5555">&#34;</span> . <span style="color:#00688b">anki-editor-reset-cloze-number</span>)
-              (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&lt;f9&gt;</span><span style="color:#cd5555">&#34;</span>  . <span style="color:#00688b">anki-editor-push-tree</span>))
+              (<span style="color:#cd5555">&#34;&lt;f12&gt;&#34;</span> . <span style="color:#00688b">anki-editor-cloze-region-auto-incr</span>)
+              (<span style="color:#cd5555">&#34;&lt;f11&gt;&#34;</span> . <span style="color:#00688b">anki-editor-cloze-region-dont-incr</span>)
+              (<span style="color:#cd5555">&#34;&lt;f10&gt;&#34;</span> . <span style="color:#00688b">anki-editor-reset-cloze-number</span>)
+              (<span style="color:#cd5555">&#34;&lt;f9&gt;&#34;</span>  . <span style="color:#00688b">anki-editor-push-tree</span>))
   <span style="color:#658b00">:hook</span> (<span style="color:#00688b">org-capture-after-finalize</span> . <span style="color:#00688b">anki-editor-reset-cloze-number</span>) <span style="color:#228b22">; Reset cloze-number after each capture.</span>
   <span style="color:#658b00">:config</span>
   (<span style="color:#658b00">setq</span> <span style="color:#00688b">anki-editor-create-decks</span> <span style="color:#00688b">t</span> <span style="color:#228b22">;; Allow anki-editor to create a new deck if it doesn&#39;t exist</span>
         <span style="color:#00688b">anki-editor-org-tags-as-anki-tags</span> <span style="color:#00688b">t</span>)
 
   (<span style="color:#658b00">defun</span> <span style="color:#00688b">anki-editor-cloze-region-auto-incr</span> (<span style="color:#8b008b;font-weight:bold">&amp;optional</span> <span style="color:#00688b">arg</span>)
-    <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Cloze region without hint and increase card number.</span><span style="color:#cd5555">&#34;</span>
+    <span style="color:#cd5555">&#34;Cloze region without hint and increase card number.&#34;</span>
     (<span style="color:#658b00">interactive</span>)
-    (<span style="color:#00688b">anki-editor-cloze-region</span> <span style="color:#00688b">my-anki-editor-cloze-number</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&#34;</span>)
+    (<span style="color:#00688b">anki-editor-cloze-region</span> <span style="color:#00688b">my-anki-editor-cloze-number</span> <span style="color:#cd5555">&#34;&#34;</span>)
     (<span style="color:#658b00">setq</span> <span style="color:#00688b">my-anki-editor-cloze-number</span> (<span style="color:#008b45">1+</span> <span style="color:#00688b">my-anki-editor-cloze-number</span>))
     (<span style="color:#00688b">forward-sexp</span>))
   (<span style="color:#658b00">defun</span> <span style="color:#00688b">anki-editor-cloze-region-dont-incr</span> (<span style="color:#8b008b;font-weight:bold">&amp;optional</span> <span style="color:#00688b">arg</span>)
-    <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Cloze region without hint using the previous card number.</span><span style="color:#cd5555">&#34;</span>
+    <span style="color:#cd5555">&#34;Cloze region without hint using the previous card number.&#34;</span>
     (<span style="color:#658b00">interactive</span>)
-    (<span style="color:#00688b">anki-editor-cloze-region</span> (<span style="color:#008b45">1-</span> <span style="color:#00688b">my-anki-editor-cloze-number</span>) <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&#34;</span>)
+    (<span style="color:#00688b">anki-editor-cloze-region</span> (<span style="color:#008b45">1-</span> <span style="color:#00688b">my-anki-editor-cloze-number</span>) <span style="color:#cd5555">&#34;&#34;</span>)
     (<span style="color:#00688b">forward-sexp</span>))
   (<span style="color:#658b00">defun</span> <span style="color:#00688b">anki-editor-reset-cloze-number</span> (<span style="color:#8b008b;font-weight:bold">&amp;optional</span> <span style="color:#00688b">arg</span>)
-    <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Reset cloze number to ARG or 1</span><span style="color:#cd5555">&#34;</span>
+    <span style="color:#cd5555">&#34;Reset cloze number to ARG or 1&#34;</span>
     (<span style="color:#658b00">interactive</span>)
     (<span style="color:#658b00">setq</span> <span style="color:#00688b">my-anki-editor-cloze-number</span> (<span style="color:#658b00">or</span> <span style="color:#00688b">arg</span> <span style="color:#b452cd">1</span>)))
   (<span style="color:#658b00">defun</span> <span style="color:#00688b">anki-editor-push-tree</span> ()
-    <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Push all notes under a tree.</span><span style="color:#cd5555">&#34;</span>
+    <span style="color:#cd5555">&#34;Push all notes under a tree.&#34;</span>
     (<span style="color:#658b00">interactive</span>)
     (<span style="color:#00688b">anki-editor-push-notes</span> &#39;(<span style="color:#b452cd">4</span>))
     (<span style="color:#00688b">anki-editor-reset-cloze-number</span>))
@@ -189,17 +189,17 @@ different materials on web.</p>
 </video>
 
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="color:#228b22">;; Org-capture templates</span>
-(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">/path/to/your/anki.org</span><span style="color:#cd5555">&#34;</span>)
+(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;/path/to/your/anki.org&#34;</span>)
 (<span style="color:#00688b">add-to-list</span> <span style="color:#cd5555">&#39;org-capture-templates</span>
-             (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">a</span><span style="color:#cd5555">&#34;</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Anki basic</span><span style="color:#cd5555">&#34;</span>
-              <span style="color:#00688b">entry</span>
-              (<span style="color:#00688b">file+headline</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Dispatch Shelf</span><span style="color:#cd5555">&#34;</span>)
-              <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">* %&lt;%H:%M&gt;   %^g</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:PROPERTIES:</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:ANKI_NOTE_TYPE: Basic</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:ANKI_DECK: Mega</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:END:</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">** Front</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">%?</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">** Back</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">%x</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">&#34;</span>))
+             &#39;(<span style="color:#cd5555">&#34;a&#34;</span> <span style="color:#cd5555">&#34;Anki basic&#34;</span>
+               <span style="color:#00688b">entry</span>
+               (<span style="color:#00688b">file+headline</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;Dispatch Shelf&#34;</span>)
+               <span style="color:#cd5555">&#34;* %&lt;%H:%M&gt;   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Basic\n:ANKI_DECK: Mega\n:END:\n** Front\n%?\n** Back\n%x\n&#34;</span>))
 (<span style="color:#00688b">add-to-list</span> <span style="color:#cd5555">&#39;org-capture-templates</span>
-             (<span style="color:#cd5555">&#34;</span><span style="color:#cd5555">A</span><span style="color:#cd5555">&#34;</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Anki cloze</span><span style="color:#cd5555">&#34;</span>
-              <span style="color:#00688b">entry</span>
-              (<span style="color:#00688b">file+headline</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Dispatch Shelf</span><span style="color:#cd5555">&#34;</span>)
-              <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">* %&lt;%H:%M&gt;   %^g</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:PROPERTIES:</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:ANKI_NOTE_TYPE: Cloze</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:ANKI_DECK: Mega</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">:END:</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">** Text</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">%x</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">** Extra</span><span style="color:#cd5555">\n</span><span style="color:#cd5555">&#34;</span>))
+             &#39;(<span style="color:#cd5555">&#34;A&#34;</span> <span style="color:#cd5555">&#34;Anki cloze&#34;</span>
+               <span style="color:#00688b">entry</span>
+               (<span style="color:#00688b">file+headline</span> <span style="color:#00688b">org-my-anki-file</span> <span style="color:#cd5555">&#34;Dispatch Shelf&#34;</span>)
+               <span style="color:#cd5555">&#34;* %&lt;%H:%M&gt;   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Cloze\n:ANKI_DECK: Mega\n:END:\n** Text\n%x\n** Extra\n&#34;</span>))
 
 <span style="color:#228b22">;; Allow Emacs to access content from clipboard.</span>
 (<span style="color:#658b00">setq</span> <span style="color:#00688b">x-select-enable-clipboard</span> <span style="color:#00688b">t</span>
@@ -233,7 +233,7 @@ books in PDF.js &hellip; Or, do I really need PDF.js when I can read books in
 
 <p>Emacs command <code>fill-paragraph (M-q)</code> comes handy for aligning irregular-shaped
 text copied from PDF.</p>
-<h2 id="org-download-flameshot-add-image-too">org-download + Flameshot: Add image too</h2>
+<h2 id="org-download-plus-flameshot-add-image-too">org-download + Flameshot: Add image too</h2>
 <p>Lastly, it&rsquo;s also good to use screen crop as note content. Thankfully
 <code>anki-editor</code> also supports that, we only need to find a convenient way to
 download image in Emacs.</p>
@@ -250,10 +250,10 @@ properly. Curious minds may search &ldquo;flameshot&rdquo; in <a href="https://g
 <p>To start <code>org-capture</code> frame in whichever application I&rsquo;m using, I took a little
 elisp function <a href="https://emacs.stackexchange.com/questions/46460/org-capture-frame-with-no-splits">here</a>:</p>
 <div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">defun</span> <span style="color:#00688b">make-orgcapture-frame</span> ()
-    <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Create a new frame and run org-capture.</span><span style="color:#cd5555">&#34;</span>
+    <span style="color:#cd5555">&#34;Create a new frame and run org-capture.&#34;</span>
     (<span style="color:#658b00">interactive</span>)
-    (<span style="color:#00688b">make-frame</span> &#39;((<span style="color:#00688b">name</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">org-capture</span><span style="color:#cd5555">&#34;</span>) (<span style="color:#008b45">window-system</span> . <span style="color:#00688b">x</span>)))
-    (<span style="color:#00688b">select-frame-by-name</span> <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">org-capture</span><span style="color:#cd5555">&#34;</span>)
+    (<span style="color:#00688b">make-frame</span> &#39;((<span style="color:#00688b">name</span> . <span style="color:#cd5555">&#34;org-capture&#34;</span>) (<span style="color:#008b45">window-system</span> . <span style="color:#00688b">x</span>)))
+    (<span style="color:#00688b">select-frame-by-name</span> <span style="color:#cd5555">&#34;org-capture&#34;</span>)
     (<span style="color:#00688b">counsel-org-capture</span>)
     (<span style="color:#00688b">delete-other-windows</span>)
     )

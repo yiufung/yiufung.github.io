@@ -93,15 +93,15 @@ only direct children. This can be set on a per-subtree basis.</p>
 then a status change would trigger insertion of a note in the <code>:LOGBOOK:</code> drawer.
 It&rsquo;s possible to define template for notes via <code>org-log-note-headings</code>. Here&rsquo;s my
 setting, which adds new timestamp (<code>%s</code>) to <code>reschedule</code> and <code>redeadline</code>:</p>
-<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-log-note-headings</span> &#39;((<span style="color:#00688b">done</span>        . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">CLOSING NOTE %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">state</span>       . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">State %-12s from %-12S %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">note</span>        . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Note taken on %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">reschedule</span>  . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Schedule changed on %t: %S -&gt; %s</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">delschedule</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Not scheduled, was %S on %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">redeadline</span>  . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Deadline changed on %t: %S -&gt; %s</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">deldeadline</span> . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Removed deadline, was %S on %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">refile</span>      . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">Refiled on %t</span><span style="color:#cd5555">&#34;</span>)
-                              (<span style="color:#00688b">clock-out</span>   . <span style="color:#cd5555">&#34;</span><span style="color:#cd5555">&#34;</span>)))
+<div class="highlight"><pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs-lisp" data-lang="emacs-lisp">(<span style="color:#658b00">setq</span> <span style="color:#00688b">org-log-note-headings</span> &#39;((<span style="color:#00688b">done</span>        . <span style="color:#cd5555">&#34;CLOSING NOTE %t&#34;</span>)
+                              (<span style="color:#00688b">state</span>       . <span style="color:#cd5555">&#34;State %-12s from %-12S %t&#34;</span>)
+                              (<span style="color:#00688b">note</span>        . <span style="color:#cd5555">&#34;Note taken on %t&#34;</span>)
+                              (<span style="color:#00688b">reschedule</span>  . <span style="color:#cd5555">&#34;Schedule changed on %t: %S -&gt; %s&#34;</span>)
+                              (<span style="color:#00688b">delschedule</span> . <span style="color:#cd5555">&#34;Not scheduled, was %S on %t&#34;</span>)
+                              (<span style="color:#00688b">redeadline</span>  . <span style="color:#cd5555">&#34;Deadline changed on %t: %S -&gt; %s&#34;</span>)
+                              (<span style="color:#00688b">deldeadline</span> . <span style="color:#cd5555">&#34;Removed deadline, was %S on %t&#34;</span>)
+                              (<span style="color:#00688b">refile</span>      . <span style="color:#cd5555">&#34;Refiled on %t&#34;</span>)
+                              (<span style="color:#00688b">clock-out</span>   . <span style="color:#cd5555">&#34;&#34;</span>)))
 </code></pre></div><style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
 <div class="org-center">
   <div></div>
