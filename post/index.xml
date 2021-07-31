@@ -6,11 +6,7 @@
     <description>Recent content in Posts on My portion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh_HK</language>
-    <lastBuildDate>Sun, 12 Jan 2020 18:24:00 +0800</lastBuildDate>
-    
-	<atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 12 Jan 2020 18:24:00 +0800</lastBuildDate><atom:link href="http://yiufung.net/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Power up Anki with Emacs, Org mode, anki-editor and more</title>
       <link>http://yiufung.net/post/anki-org/</link>

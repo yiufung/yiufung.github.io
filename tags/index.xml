@@ -5,10 +5,6 @@
     <link>http://yiufung.net/tags/</link>
     <description>Recent content in Tags on My portion</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh_HK</language>
-    
-	<atom:link href="http://yiufung.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh_HK</language><atom:link href="http://yiufung.net/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
